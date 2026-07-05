@@ -17,6 +17,8 @@ export {
   isManifestImage,
 } from "@/lib/resolveImage";
 
+export { getMiracoiIconSrc, getMiracoiIconVersion, MIRACOI_ICON_FALLBACK } from "@/lib/miracoiIcon";
+
 export type { ImageSlotKey } from "@/lib/resolveImage";
 
 const MANIFEST_FILES = new Set((manifest as { files: string[] }).files);

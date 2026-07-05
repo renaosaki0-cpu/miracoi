@@ -143,7 +143,33 @@ function pick(files, candidates, used, options = {}) {
 
 /** @param {string[]} files */
 function pickMiracoiIcon(files) {
-  return files.find((f) => /^miracoi-icon$/i.test(baseName(f))) ?? null;
+  const matches = files.filter((f) => /^miracoi-icon$/i.test(baseName(f)));
+  if (matches.length === 0) return null;
+
+  matches.sort((a, b) => {
+    const mtime = (p) => fs.statSync(path.join(ROOT, "public", p.slice(1))).mtimeMs;
+    return mtime(b) - mtime(a);
+  });
+
+  return syncMiracoiIconAssets(matches[0]);
+}
+
+/** 正規パスへ統一し、Next.js favicon / apple-touch-icon も同期 */
+function syncMiracoiIconAssets(sourceUrl) {
+  const canonicalRel = "/images/miracoi-icon.png";
+  const canonicalAbs = path.join(IMAGES_ROOT, "miracoi-icon.png");
+  const sourceAbs = path.join(ROOT, "public", sourceUrl.slice(1));
+
+  if (!fs.existsSync(sourceAbs)) return null;
+
+  fs.copyFileSync(sourceAbs, canonicalAbs);
+
+  const appDir = path.join(ROOT, "app");
+  fs.mkdirSync(appDir, { recursive: true });
+  fs.copyFileSync(canonicalAbs, path.join(appDir, "icon.png"));
+  fs.copyFileSync(canonicalAbs, path.join(appDir, "apple-icon.png"));
+
+  return canonicalRel;
 }
 
 /** @param {string[]} files @param {string[]} slugs */

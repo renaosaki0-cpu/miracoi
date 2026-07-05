@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# auto-synced from public/images/miracoi-icon.png (npm run images:sync)
+/app/icon.png
+/app/apple-icon.png

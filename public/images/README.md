@@ -6,6 +6,7 @@
 
 | ファイル | 用途 |
 |---------|------|
+| `miracoi-icon.png` | ヘッダー・フッター・favicon・apple-touch-icon |
 | `hero.jpg` | ファーストビュー |
 | `story.jpg` | Storyセクション |
 | `cta-bg.jpg` | 最終CTA背景 |

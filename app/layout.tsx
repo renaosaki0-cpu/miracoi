@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP } from "next/font/google";
+import { getMiracoiIconSrc } from "@/lib/miracoiIcon";
 import { getOgImageMetadata, getOgImageUrls } from "@/lib/ogImages";
 import "./globals.css";
 
@@ -19,6 +20,7 @@ const inter = Inter({
 
 const ogImages = getOgImageMetadata();
 const ogImageUrls = getOgImageUrls();
+const miracoiIconSrc = getMiracoiIconSrc();
 
 export const metadata: Metadata = {
   title: {
@@ -29,6 +31,11 @@ export const metadata: Metadata = {
     "高校生ユニットMiracoiは、よさこいを通じてモザンビークの子どもたちの声を聞き、未来へつなぐ国際協力プロジェクト。77万円のクラウドファンディングにご支援ください。",
   keywords: ["Miracoi", "ミラコイ", "よさこい", "モザンビーク", "クラウドファンディング", "高校生", "国際協力"],
   metadataBase: new URL("https://miracoi.jp"),
+  icons: {
+    icon: [{ url: miracoiIconSrc, type: "image/png" }],
+    apple: [{ url: miracoiIconSrc, type: "image/png", sizes: "180x180" }],
+    shortcut: miracoiIconSrc,
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",

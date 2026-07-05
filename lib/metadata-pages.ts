@@ -47,4 +47,16 @@ export const PAGE_METADATA: Record<string, Metadata> = {
     description: "活動に関するご質問、メディア取材、応援メッセージの送付はこちらから。",
     openGraph: { url: `${BASE}/contact`, ...ogImagesField },
   },
+  terms: {
+    title: "利用規約",
+    description:
+      "Miracoiウェブサイトの利用規約です。サイトのご利用にあたっての条件、禁止事項、著作権、免責事項等について定めています。",
+    openGraph: { url: `${BASE}/terms`, ...ogImagesField },
+  },
+  privacy: {
+    title: "プライバシーポリシー",
+    description:
+      "Miracoiウェブサイトのプライバシーポリシーです。個人情報の取得・利用目的・管理方法、Cookieの利用等について定めています。",
+    openGraph: { url: `${BASE}/privacy`, ...ogImagesField },
+  },
 };

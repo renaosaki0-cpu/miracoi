@@ -1,5 +1,4 @@
-/** 団体アイコン — public/images/miracoi-icon.png（透過PNG） */
-export const MIRACOI_ICON_FALLBACK = "/images/miracoi-icon.png";
+import { getMiracoiIconSrc } from "@/lib/miracoiIcon";
 
 type MiracoiIconProps = {
   size?: number;
@@ -7,10 +6,11 @@ type MiracoiIconProps = {
   priority?: boolean;
 };
 
+/** 団体アイコン — manifest の icon スロット（透過PNG） */
 export function MiracoiIcon({ size = 32, className = "", priority = false }: MiracoiIconProps) {
   return (
     <img
-      src={MIRACOI_ICON_FALLBACK}
+      src={getMiracoiIconSrc()}
       alt="Miracoi"
       width={size}
       height={size}
