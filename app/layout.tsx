@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     description: "よさこいを通じて、モザンビークの子どもたちの声を未来へつなぐ高校生ユニット。",
     ...(ogImageUrls ? { images: ogImageUrls } : {}),
   },
+  verification: {
+    google: "8LY9TmO1SyqWr6S1Gb6PQFcEe07czDgRUvN-O-INXTc",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
