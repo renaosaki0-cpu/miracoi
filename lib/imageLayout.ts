@@ -2,6 +2,7 @@
 export const IMAGE_LAYOUT = {
   hero: "object-cover object-[center_38%]",
   story: "object-contain object-center",
+  storyLearning: "object-cover object-center",
   ctaBg: "object-cover object-center",
   member: "object-cover object-[center_22%]",
   supporter: "object-cover object-[center_20%]",

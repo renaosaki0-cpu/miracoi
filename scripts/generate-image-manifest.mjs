@@ -218,6 +218,7 @@ function buildManifest(files) {
 
   assign("hero", ["hero", /^hero-/]);
   assign("story", ["story", /^story-/]);
+  assign("storyLearning", ["sewing-workshop", "sewing_workshop"]);
   assign("ctaBg", ["cta-bg", "cta", "cta_bg"]);
   assign("og", ["og-image", "og", "og_image"]);
   assign("memberRena", ["member-rena", "member_rena", "rena", "ozaki", "ozaki-rena", "rena-ozaki"]);

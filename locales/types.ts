@@ -47,6 +47,7 @@ export type Dictionary = {
     p3: string;
     highlight: string;
     cta: string;
+    learningPhoto: { alt: string; caption: string };
   };
   mission: {
     label: string;

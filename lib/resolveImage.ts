@@ -7,6 +7,7 @@ export type ImageSlotKey =
   | "icon"
   | "hero"
   | "story"
+  | "storyLearning"
   | "ctaBg"
   | "og"
   | "project1"

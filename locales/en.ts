@@ -54,6 +54,11 @@ const en: Dictionary = {
     p3: "The children we met dream, worry, and think about the future — just like us. This time, we go to listen to each child's voice.",
     highlight: "Even without words, hearts connect — 11 years of Yosakoi becomes our bridge.",
     cta: "Support This Challenge",
+    learningPhoto: {
+      alt: "Learning together with local children on site",
+      caption:
+        "Learning how to use a sewing machine from local community members. We value time learning from each other — not teaching or being taught, but learning together.",
+    },
   },
   mission: {
     label: "Mission",

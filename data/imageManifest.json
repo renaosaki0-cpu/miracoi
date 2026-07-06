@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T11:41:27.085Z",
+  "generatedAt": "2026-07-06T14:50:04.816Z",
   "files": [
     "/images/15EAFAF9-7061-4291-8588-21194269BA30.png",
     "/images/gallery/gallery1.jpg",
@@ -22,6 +22,7 @@
     "/images/return-30000.png",
     "/images/return-5000.png",
     "/images/return-50000.png",
+    "/images/sewing-workshop.jpg",
     "/images/story.jpg",
     "/images/supporters/supporter-chie.jpg",
     "/images/supporters/supporter-daiki.jpg",
@@ -47,6 +48,7 @@
     "icon": "/images/miracoi-icon.png",
     "hero": "/images/hero.png",
     "story": "/images/story.jpg",
+    "storyLearning": "/images/sewing-workshop.jpg",
     "ctaBg": null,
     "og": null,
     "memberRena": "/images/member-rena.jpg",

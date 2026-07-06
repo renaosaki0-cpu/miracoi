@@ -58,6 +58,24 @@ export function Story() {
             </ScrollReveal>
           </div>
         </div>
+
+        <ScrollReveal className="mt-16 md:mt-20 lg:mt-24">
+          <figure className="mx-auto max-w-3xl px-2 sm:px-6 md:px-8">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl shadow-black/[0.06] ring-1 ring-accent/60 sm:aspect-[3/2] md:rounded-[2.5rem]">
+              <MiraiImage
+                src={resolveImage("storyLearning")}
+                alt={t.story.learningPhoto.alt}
+                fill
+                className="h-full w-full"
+                imageClassName={layoutClass("storyLearning")}
+                sizes="(max-width: 768px) 100vw, 48rem"
+              />
+            </div>
+            <figcaption className="mt-5 text-center text-sm leading-relaxed text-subtext md:mt-6 md:text-base">
+              {t.story.learningPhoto.caption}
+            </figcaption>
+          </figure>
+        </ScrollReveal>
       </div>
     </section>
   );

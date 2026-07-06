@@ -54,6 +54,11 @@ const pt: Dictionary = {
     p3: "As crianças que conhecemos sonham, preocupam-se e pensam no futuro — tal como nós. Desta vez, vamos ouvir a voz de cada criança.",
     highlight: "Mesmo sem palavras, os corações ligam-se — 11 anos de Yosakoi tornam-se a nossa ponte.",
     cta: "Apoiar Este Desafio",
+    learningPhoto: {
+      alt: "Aprender juntos com crianças locais no terreno",
+      caption:
+        "A aprender a usar uma máquina de costura com membros da comunidade local. Valorizamos o tempo de aprender uns com os outros — não ensinar nem ser ensinados, mas aprender em conjunto.",
+    },
   },
   mission: {
     label: "Missão",
