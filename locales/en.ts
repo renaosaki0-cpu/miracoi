@@ -106,7 +106,7 @@ const en: Dictionary = {
       },
       "local-activities": {
         title: "Activities in Mozambique",
-        description: "Yosakoi workshops, exchange, and original song performances at three local schools.",
+        description: "Three activities with local children: Yosakoi workshop, dream message workshop, and original song production.",
       },
       "post-return": {
         title: "After Returning to Japan",
@@ -115,9 +115,7 @@ const en: Dictionary = {
       },
       "original-song": {
         title: "About the Original Song",
-        description: "From dream message workshops, we create an original Yosakoi song reflecting each child's dreams, hopes, worries, and future aspirations.",
-        quote: "Not just recording voices — transforming them into songs and dances that live on as unforgettable experiences.",
-        points: ["Children's voices → lyrics → song", "Remains in Mozambique after return", "Donate naruko to schools & communities"],
+        description: "We create an original Yosakoi song based on each child's voice gathered through dream message workshops.",
       },
       "why-listen": {
         title: "Why Listen to Children",
@@ -137,8 +135,7 @@ const en: Dictionary = {
       },
       schedule: {
         title: "Activity Schedule",
-        description: "September 6–10, 2026 in Maputo, Sinyangwine Village, Bondia Village, and more.",
-        points: ["9/6 Maputo: Meetings", "9/7 Sinyangwine Village", "9/8 Bondia Village", "9/9 Benfica Nova School", "9/10 Reflection & return"],
+        description: "Visit schedule in Mozambique from September 6–10, 2026.",
         note: "*Schedule subject to change.",
       },
       "impact-future": {
@@ -158,20 +155,70 @@ const en: Dictionary = {
         { id: "schools", label: "3 schools visited" },
         { id: "participants", label: "80–100 participants expected" },
       ],
-      songFlow: [
-        { id: "voice", label: "Children's voices" },
-        { id: "lyrics", label: "Lyrics creation" },
-        { id: "complete", label: "Yosakoi song complete" },
-        { id: "legacy", label: "Lives on after return" },
+      localActivityItems: [
+        {
+          id: "workshop",
+          title: "Yosakoi Workshop: \"Kono Chi e~\"",
+          paragraphs: [
+            "We sing and dance Kochi's Yosakoi song \"Kono Chi e~\" together with the children.",
+            "Moving our bodies with naruko in hand, we take the first step toward trust across language and cultural differences.",
+            "Sharing the message in the lyrics — \"Let's all draw our dreams and speak of love today\" — we laugh and enjoy together, aiming to create a safe space where children feel they can share their voice.",
+          ],
+        },
+        {
+          id: "dialogue",
+          title: "Dream Message Workshop",
+          paragraphs: [
+            "After building relationships through Yosakoi, we listen to each child's voice.",
+            "We dialogue about dreams, hopes, worries, the future, and what matters most to them.",
+            "Beyond words, children express themselves freely through drawings, message cards, and whatever feels natural to them.",
+            "We receive each voice with care and connect it to the future.",
+          ],
+        },
+        {
+          id: "song",
+          title: "Original Song from Children's Voices",
+          paragraphs: [
+            "Based on each child's voice gathered in dream message workshops, we create an original Miracoi Yosakoi song.",
+            "Not only dreams and hopes, but worries and aspirations for the future are reflected in the lyrics and melody, turning children's own words into one work.",
+            "We carry forward the feelings born from singing and dancing \"Kono Chi e~\" together as we create the song.",
+            "The completed song will be sung and danced in both Japan and Mozambique, living on as a work for the future.",
+          ],
+        },
       ],
-      songSummary:
-        "Voices gathered in dream message workshops become lyrics, then an original Yosakoi song we perform together. The song stays in Mozambique as a lasting memory.",
+      songHeadline: "Children's voices become one song.",
+      songIntro: "From dream message workshops, each child's",
+      songThemes: ["dreams", "hopes", "worries", "aspirations for the future"],
+      songClosing: "become the foundation for an original Yosakoi song.",
+      songFlowTitle: "3 Steps: Voices Connected to the Future",
+      songFlow: [
+        { id: "voice", title: "① Listen to voices", description: "We dialogue about dreams and the future." },
+        { id: "lyrics", title: "② Turn into lyrics", description: "Children's own words become song lyrics." },
+        { id: "complete", title: "③ Leave as a song for the future", description: "We dance together, creating a work that connects to the future." },
+      ],
+      songGoalsTitle: "What We Aim to Achieve",
+      songGoals: [
+        "Give shape to children's own words",
+        "Help them feel their voice has value",
+        "Leave a lasting presence in schools and communities after we return",
+      ],
+      scheduleDateRange: "September 6–10, 2026",
       scheduleItems: [
-        { date: "9/6", label: "Meetings" },
-        { date: "9/7", label: "Sinyangwine Village" },
-        { date: "9/8", label: "Bondia Village" },
-        { date: "9/9", label: "Benfica Nova Secondary School" },
-        { date: "9/10", label: "Reflection & return" },
+        {
+          date: "September 6, 2026",
+          details: ["Arrival in Mozambique", "Meetings with local staff"],
+        },
+        { date: "September 7, 2026", title: "Visit to Sinyangwine Village" },
+        { date: "September 8, 2026", title: "Visit to Bondia Village" },
+        { date: "September 9, 2026", title: "Visit to Benfica Nova Secondary School" },
+        { date: "September 10, 2026", title: "Reflection & return" },
+      ],
+      postReturnTitle: "After Returning",
+      postReturnItems: [
+        { id: "documentary", label: "Documentary production" },
+        { id: "song", label: "Original song completion" },
+        { id: "report", label: "Report sessions across Japan" },
+        { id: "exchange", label: "Ongoing exchange activities" },
       ],
     },
   },
@@ -201,14 +248,87 @@ const en: Dictionary = {
   projectPage: {
     label: "Project",
     title: "The Miracoi Project",
-    intro: "An overview of the activities we will carry out on the ground in Mozambique for this project.",
-    sections: [
+    intro:
+      "In September 2026, we visit three schools and villages in Mozambique, meet children through Yosakoi, listen to each voice, and connect those feelings to the future.",
+    visits: {
+      label: "Destinations",
+      heading: "Three Schools & Villages We Visit",
+      description: "September 7–9, 2026 — visiting three regions in Mozambique in sequence.",
+    },
+    schools: [
       {
-        id: "local-activities",
-        title: "Activities in Mozambique",
-        description: "We visit three schools in Mozambique to connect with children through Yosakoi.",
+        id: "sinyangwine",
+        name: "Sinyangwine Village Elementary",
+        place: "Sinyangwine Village",
+        date: "9/7",
+        note: "A village where Yasunaga has exchanged for over 5 years — creating a Yosakoi space for the whole community.",
+      },
+      {
+        id: "bondia",
+        name: "Bondia Village Elementary",
+        place: "Bondia Village",
+        date: "9/8",
+        note: "Building on trusted local ties to connect with children at eye level.",
+      },
+      {
+        id: "benfica",
+        name: "Benfica Nova Secondary School",
+        place: "Maputo",
+        date: "9/9",
+        note: "An urban school where we reach more children through Yosakoi exchange.",
       },
     ],
+    sharedActivities: {
+      label: "Activities",
+      heading: "Three activities at every destination.",
+      description:
+        "At all three schools and villages, we carry out activities leading to Yosakoi workshops, dream message workshops, and original song production.",
+      items: [
+        {
+          id: "workshop",
+          title: "Yosakoi Workshop: \"Kono Chi e~\"",
+          paragraphs: [
+            "We sing and dance Kochi's Yosakoi song \"Kono Chi e~\" together with the children.",
+            "Moving our bodies with naruko in hand, we take the first step toward trust across language and cultural differences.",
+          ],
+        },
+        {
+          id: "dialogue",
+          title: "Dream Message Workshop",
+          paragraphs: [
+            "After building relationships through Yosakoi, we listen to each child's dreams, hopes, worries, and aspirations for the future.",
+            "Beyond words, children express themselves freely through drawings, message cards, and whatever feels natural to them.",
+          ],
+        },
+        {
+          id: "song",
+          title: "Original Song from Children's Voices",
+          paragraphs: [
+            "Based on each child's voice gathered in dream message workshops, we create an original Miracoi Yosakoi song.",
+            "The completed song is sung and danced with local children, and also shared in Japan through report sessions and outreach after we return.",
+          ],
+        },
+      ],
+    },
+    scheduleSection: {
+      label: "Schedule",
+      heading: "Activity Schedule",
+      note: "*Schedule subject to change.",
+      items: [
+        { date: "September 6, 2026", title: "Arrival in Mozambique & meetings with local staff" },
+        { date: "September 7, 2026", title: "Visit to Sinyangwine Village" },
+        { date: "September 8, 2026", title: "Visit to Bondia Village" },
+        { date: "September 9, 2026", title: "Visit to Benfica Nova Secondary School" },
+        { date: "September 10, 2026", title: "Reflection & return" },
+      ],
+      postReturnTitle: "After Returning",
+      postReturnItems: [
+        { id: "documentary", label: "Documentary production" },
+        { id: "song", label: "Original song completion" },
+        { id: "report", label: "Report sessions across Japan" },
+        { id: "exchange", label: "Ongoing exchange activities" },
+      ],
+    },
     localActivities: {
       schoolsLabel: "Visit",
       schoolsHeading: "Three Schools We Visit",
@@ -231,29 +351,6 @@ const en: Dictionary = {
         },
       ],
     },
-    schools: [
-      {
-        id: "sinyangwine",
-        name: "Sinyangwine Village Elementary",
-        place: "Sinyangwine",
-        date: "Sep 7",
-        note: "A village where Yasunaga has exchanged for over 5 years — creating a Yosakoi space for the whole community.",
-      },
-      {
-        id: "bondia",
-        name: "Bondia Village Elementary",
-        place: "Bondia",
-        date: "Sep 8",
-        note: "Building on trusted local ties for open dialogue with children.",
-      },
-      {
-        id: "benfica",
-        name: "Benfica Nova Secondary School",
-        place: "Maputo",
-        date: "Sep 9",
-        note: "An urban school where we reach more children through Yosakoi exchange.",
-      },
-    ],
     cta: "Support This Challenge",
   },
   returnsPage: {

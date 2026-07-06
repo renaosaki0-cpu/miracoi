@@ -106,7 +106,7 @@ const pt: Dictionary = {
       },
       "local-activities": {
         title: "Actividades em Moçambique",
-        description: "Workshops de Yosakoi, intercâmbio e apresentação de música original em três escolas locais.",
+        description: "Três actividades com crianças locais: workshop de Yosakoi, workshop de mensagens de sonho e produção de música original.",
       },
       "post-return": {
         title: "Após Regressar ao Japão",
@@ -115,9 +115,7 @@ const pt: Dictionary = {
       },
       "original-song": {
         title: "Sobre a Música Original",
-        description: "A partir dos workshops de mensagens de sonho, criamos uma música original de Yosakoi que reflecte os sonhos, esperanças, preocupações e aspirações futuras de cada criança.",
-        quote: "Não apenas registar vozes — transformá-las em músicas e danças que permanecem como experiências inesquecíveis.",
-        points: ["Voz das crianças → letra → música", "Permanece em Moçambique após o regresso", "Doar naruko a escolas e comunidades"],
+        description: "Criamos uma música original de Yosakoi com base na voz de cada criança recolhida nos workshops de mensagens de sonho.",
       },
       "why-listen": {
         title: "Porquê Ouvir as Crianças",
@@ -137,8 +135,7 @@ const pt: Dictionary = {
       },
       schedule: {
         title: "Calendário de Actividades",
-        description: "6–10 de setembro de 2026 em Maputo, Aldeia Sinyangwine, Aldeia Bondia e mais.",
-        points: ["6/9 Maputo: Reuniões", "7/9 Aldeia Sinyangwine", "8/9 Aldeia Bondia", "9/9 Escola Secundária Benfica Nova", "10/9 Reflexão e regresso"],
+        description: "Calendário de visitas em Moçambique de 6 a 10 de setembro de 2026.",
         note: "*Calendário sujeito a alterações.",
       },
       "impact-future": {
@@ -158,20 +155,70 @@ const pt: Dictionary = {
         { id: "schools", label: "3 escolas visitadas" },
         { id: "participants", label: "80–100 participantes previstos" },
       ],
-      songFlow: [
-        { id: "voice", label: "Voz das crianças" },
-        { id: "lyrics", label: "Criação da letra" },
-        { id: "complete", label: "Música Yosakoi concluída" },
-        { id: "legacy", label: "Permanece após o regresso" },
+      localActivityItems: [
+        {
+          id: "workshop",
+          title: "Workshop de Yosakoi: \"Kono Chi e~\"",
+          paragraphs: [
+            "Cantamos e dançamos a música Yosakoi de Kochi \"Kono Chi e~\" juntamente com as crianças.",
+            "Movendo o corpo com naruko na mão, damos o primeiro passo para construir confiança além das diferenças de língua e cultura.",
+            "Partilhando a mensagem da letra — \"Vamos todos desenhar os nossos sonhos e falar de amor hoje\" — rimos e divertimo-nos juntos, criando um espaço seguro onde as crianças sintam que podem partilhar a sua voz.",
+          ],
+        },
+        {
+          id: "dialogue",
+          title: "Workshop de Mensagens de Sonho",
+          paragraphs: [
+            "Depois de construir relações através do Yosakoi, ouvimos a voz de cada criança.",
+            "Dialogamos sobre sonhos, esperanças, preocupações, futuro e o que é mais importante para elas.",
+            "Para além das palavras, as crianças expressam-se livremente através de desenhos, cartões de mensagem e o método que lhes for mais natural.",
+            "Recebemos cada voz com cuidado e ligamo-la ao futuro.",
+          ],
+        },
+        {
+          id: "song",
+          title: "Música Original a partir das Vozes das Crianças",
+          paragraphs: [
+            "Com base na voz de cada criança recolhida nos workshops de mensagens de sonho, criamos uma música Yosakoi original da Miracoi.",
+            "Não só sonhos e esperanças, mas também preocupações e aspirações futuras são reflectidas na letra e melodia, transformando as próprias palavras das crianças numa obra.",
+            "Valorizamos os sentimentos nascidos do tempo em que cantamos e dançámos \"Kono Chi e~\" juntos enquanto avançamos na produção.",
+            "A música concluída será cantada e dançada tanto no Japão como em Moçambique, permanecendo como uma obra para o futuro.",
+          ],
+        },
       ],
-      songSummary:
-        "As vozes recolhidas nos workshops de mensagens de sonho tornam-se letra e, depois, uma música Yosakoi original que apresentamos juntos. A música fica em Moçambique como memória duradoura.",
+      songHeadline: "As vozes das crianças tornam-se uma música.",
+      songIntro: "Nos workshops de mensagens de sonho, de cada criança",
+      songThemes: ["sonhos", "esperanças", "preocupações", "aspirações para o futuro"],
+      songClosing: "surgem a base para uma música original de Yosakoi.",
+      songFlowTitle: "3 Passos: Vozes Ligadas ao Futuro",
+      songFlow: [
+        { id: "voice", title: "① Ouvir vozes", description: "Dialogamos sobre sonhos e o futuro." },
+        { id: "lyrics", title: "② Transformar em letra", description: "As próprias palavras das crianças tornam-se letra." },
+        { id: "complete", title: "③ Deixar como música para o futuro", description: "Dançamos juntos, criando uma obra que se liga ao futuro." },
+      ],
+      songGoalsTitle: "O Que Queremos Alcançar",
+      songGoals: [
+        "Dar forma às próprias palavras das crianças",
+        "Fazer com que sintam que a sua voz tem valor",
+        "Permanecer nas escolas e comunidades após o regresso",
+      ],
+      scheduleDateRange: "6–10 de setembro de 2026",
       scheduleItems: [
-        { date: "6/9", label: "Reuniões" },
-        { date: "7/9", label: "Aldeia Sinyangwine" },
-        { date: "8/9", label: "Aldeia Bondia" },
-        { date: "9/9", label: "Escola Secundária Benfica Nova" },
-        { date: "10/9", label: "Reflexão e regresso" },
+        {
+          date: "6 de setembro de 2026",
+          details: ["Chegada a Moçambique", "Reuniões com equipa local"],
+        },
+        { date: "7 de setembro de 2026", title: "Visita à Aldeia Sinyangwine" },
+        { date: "8 de setembro de 2026", title: "Visita à Aldeia Bondia" },
+        { date: "9 de setembro de 2026", title: "Visita à Escola Secundária Benfica Nova" },
+        { date: "10 de setembro de 2026", title: "Reflexão e regresso" },
+      ],
+      postReturnTitle: "Após o Regresso",
+      postReturnItems: [
+        { id: "documentary", label: "Produção de documentário" },
+        { id: "song", label: "Conclusão da música original" },
+        { id: "report", label: "Sessões de relatório em todo o Japão" },
+        { id: "exchange", label: "Actividades de intercâmbio contínuas" },
       ],
     },
   },
@@ -201,14 +248,87 @@ const pt: Dictionary = {
   projectPage: {
     label: "Projeto",
     title: "Projeto Miracoi",
-    intro: "Apresentamos as actividades que realizaremos no terreno em Moçambique neste projecto.",
-    sections: [
+    intro:
+      "Neste projecto, em setembro de 2026, visitamos três escolas e aldeias em Moçambique, encontramo-nos com crianças através do Yosakoi, ouvimos cada voz e ligamos esses sentimentos ao futuro.",
+    visits: {
+      label: "Destinos",
+      heading: "Três Escolas e Aldeias que Visitamos",
+      description: "7–9 de setembro de 2026 — visita sequencial a três regiões de Moçambique.",
+    },
+    schools: [
       {
-        id: "local-activities",
-        title: "Actividades em Moçambique",
-        description: "Visitamos três escolas em Moçambique para nos ligar às crianças através do Yosakoi.",
+        id: "sinyangwine",
+        name: "Escola Primária Aldeia Sinyangwine",
+        place: "Aldeia Sinyangwine",
+        date: "7/9",
+        note: "Aldeia onde Yasunaga mantém intercâmbio há mais de 5 anos — um espaço Yosakoi para toda a comunidade.",
+      },
+      {
+        id: "bondia",
+        name: "Escola Primária Aldeia Bondia",
+        place: "Aldeia Bondia",
+        date: "8/9",
+        note: "Aproveitando laços locais de confiança para nos ligar às crianças no mesmo nível.",
+      },
+      {
+        id: "benfica",
+        name: "Escola Secundária Benfica Nova",
+        place: "Maputo",
+        date: "9/9",
+        note: "Escola urbana onde alcançamos mais crianças através do intercâmbio Yosakoi.",
       },
     ],
+    sharedActivities: {
+      label: "Actividades",
+      heading: "Três actividades em todos os destinos.",
+      description:
+        "Em todas as três escolas e aldeias, realizamos actividades que conduzem a workshops de Yosakoi, workshops de mensagens de sonho e produção de música original.",
+      items: [
+        {
+          id: "workshop",
+          title: "Workshop de Yosakoi: \"Kono Chi e~\"",
+          paragraphs: [
+            "Cantamos e dançamos a música Yosakoi de Kochi \"Kono Chi e~\" juntamente com as crianças.",
+            "Movendo o corpo com naruko na mão, damos o primeiro passo para construir confiança além das diferenças de língua e cultura.",
+          ],
+        },
+        {
+          id: "dialogue",
+          title: "Workshop de Mensagens de Sonho",
+          paragraphs: [
+            "Depois de construir relações através do Yosakoi, ouvimos os sonhos, esperanças, preocupações e aspirações futuras de cada criança.",
+            "Para além das palavras, as crianças expressam-se livremente através de desenhos, cartões de mensagem e o método que lhes for mais natural.",
+          ],
+        },
+        {
+          id: "song",
+          title: "Música Original a partir das Vozes das Crianças",
+          paragraphs: [
+            "Com base na voz de cada criança recolhida nos workshops de mensagens de sonho, criamos uma música Yosakoi original da Miracoi.",
+            "A música concluída é cantada e dançada com as crianças locais e também partilhada no Japão através de sessões de relatório e divulgação após o regresso.",
+          ],
+        },
+      ],
+    },
+    scheduleSection: {
+      label: "Calendário",
+      heading: "Calendário de Actividades",
+      note: "*Calendário sujeito a alterações.",
+      items: [
+        { date: "6 de setembro de 2026", title: "Chegada a Moçambique e reuniões com equipa local" },
+        { date: "7 de setembro de 2026", title: "Visita à Aldeia Sinyangwine" },
+        { date: "8 de setembro de 2026", title: "Visita à Aldeia Bondia" },
+        { date: "9 de setembro de 2026", title: "Visita à Escola Secundária Benfica Nova" },
+        { date: "10 de setembro de 2026", title: "Reflexão e regresso" },
+      ],
+      postReturnTitle: "Após o Regresso",
+      postReturnItems: [
+        { id: "documentary", label: "Produção de documentário" },
+        { id: "song", label: "Conclusão da música original" },
+        { id: "report", label: "Sessões de relatório em todo o Japão" },
+        { id: "exchange", label: "Actividades de intercâmbio contínuas" },
+      ],
+    },
     localActivities: {
       schoolsLabel: "Visita",
       schoolsHeading: "Três Escolas que Visitamos",
@@ -231,29 +351,6 @@ const pt: Dictionary = {
         },
       ],
     },
-    schools: [
-      {
-        id: "sinyangwine",
-        name: "Escola Primária Aldeia Sinyangwine",
-        place: "Sinyangwine",
-        date: "7 Set",
-        note: "Aldeia onde Yasunaga mantém intercâmbio há mais de 5 anos — um espaço Yosakoi para toda a comunidade.",
-      },
-      {
-        id: "bondia",
-        name: "Escola Primária Aldeia Bondia",
-        place: "Bondia",
-        date: "8 Set",
-        note: "Aproveitando laços locais de confiança para diálogo aberto com crianças.",
-      },
-      {
-        id: "benfica",
-        name: "Escola Secundária Benfica Nova",
-        place: "Maputo",
-        date: "9 Set",
-        note: "Escola urbana onde alcançamos mais crianças através do intercâmbio Yosakoi.",
-      },
-    ],
     cta: "Apoiar Este Desafio",
   },
   returnsPage: {

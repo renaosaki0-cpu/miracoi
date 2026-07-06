@@ -76,9 +76,19 @@ export type Dictionary = {
     >;
     panels: {
       localHighlights: { id: string; label: string }[];
-      songFlow: { id: string; label: string }[];
-      songSummary: string;
-      scheduleItems: { date: string; label: string }[];
+      localActivityItems: { id: string; title: string; paragraphs: string[] }[];
+      songHeadline: string;
+      songIntro: string;
+      songThemes: string[];
+      songClosing: string;
+      songFlowTitle: string;
+      songFlow: { id: string; title: string; description: string }[];
+      songGoalsTitle: string;
+      songGoals: string[];
+      scheduleDateRange: string;
+      scheduleItems: { date: string; title?: string; details?: string[] }[];
+      postReturnTitle: string;
+      postReturnItems: { id: string; label: string }[];
     };
   };
   impact: {
@@ -103,20 +113,32 @@ export type Dictionary = {
     label: string;
     title: string;
     intro: string;
-    sections: {
-      id: string;
-      title: string;
+    visits: {
+      label: string;
+      heading: string;
       description: string;
-      points?: string[];
-      quote?: string;
-    }[];
+    };
+    schools: { id: string; name: string; place: string; date: string; note?: string }[];
+    sharedActivities: {
+      label: string;
+      heading: string;
+      description: string;
+      items: { id: string; title: string; paragraphs: string[] }[];
+    };
+    scheduleSection: {
+      label: string;
+      heading: string;
+      note: string;
+      items: { date: string; title: string }[];
+      postReturnTitle: string;
+      postReturnItems: { id: string; label: string }[];
+    };
     localActivities: {
       schoolsLabel: string;
       schoolsHeading: string;
       schoolsSubheading?: string;
       activityItems: { id: string; title: string; description: string }[];
     };
-    schools: { id: string; name: string; place: string; date: string; note?: string }[];
     cta: string;
   };
   returnsPage: {
