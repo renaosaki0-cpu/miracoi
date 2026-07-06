@@ -584,7 +584,10 @@ const en: Dictionary = {
     description: "Common questions about support and activities.",
     items: [
       { q: "What is Miracoi?", a: "Mirai (Future) × Yosakoi. A high school unit connecting children's voices to the future through dance and music." },
-      { q: "Why Mozambique?", a: "Over 5 years of exchange with trusted local schools and communities, with ongoing relationships after return." },
+      {
+        q: "Why Mozambique?",
+        a: "Co-representative Momoe Yasunaga has continued exchange with Mozambique for over five years since elementary school — this is the starting point of this project. We have trusted relationships with local schools and villages, and an environment where ongoing exchange is possible.\n\nWhen she visited Mozambique in her second year of junior high school, she witnessed realities that make it difficult for children to choose their own future — child marriage, educational inequality, and more. From that experience came the desire to create a society where children can have their own voice and choose their future.\n\nWe have continued online exchange and Yosakoi exchange, but felt there are things that cannot be fully conveyed through a screen. That is why this time we are going to Mozambique in person — to sing, dance, and listen to each child's voice in the same place.",
+      },
       { q: "How are funds used?", a: "¥770,000 covers travel (¥480k), accommodation (¥90k), Yosakoi goods (~¥60k), and platform fees (~¥139k)." },
       { q: "When is the activity?", a: "Planned for September 6–10, 2026. Schedule may change due to local conditions." },
       { q: "Safety measures?", a: "We work with Shikoku Global Network and local coordinators under adult supervision." },

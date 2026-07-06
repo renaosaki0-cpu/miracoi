@@ -45,7 +45,7 @@ export function FAQ() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <p className="border-t border-accent px-5 pb-5 pt-4 text-sm leading-relaxed text-subtext md:px-6 md:pb-6">
+                        <p className="border-t border-accent whitespace-pre-line px-5 pb-5 pt-4 text-sm leading-relaxed text-subtext md:px-6 md:pb-6">
                           {item.a}
                         </p>
                       </motion.div>

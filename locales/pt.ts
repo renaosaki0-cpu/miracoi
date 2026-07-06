@@ -584,7 +584,10 @@ const pt: Dictionary = {
     description: "Perguntas comuns sobre apoio e actividades.",
     items: [
       { q: "O que é a Miracoi?", a: "Mirai (Futuro) × Yosakoi. Uma unidade de estudantes do ensino secundário que liga a voz das crianças ao futuro através da dança e da música." },
-      { q: "Porquê Moçambique?", a: "Mais de 5 anos de intercâmbio com escolas e comunidades locais de confiança, com relações contínuas após o regresso." },
+      {
+        q: "Porquê Moçambique?",
+        a: "A co-representante Momoe Yasunaga mantém intercâmbio com Moçambique há mais de 5 anos desde o ensino primário — este é o ponto de partida deste projecto. Temos relações de confiança com escolas e aldeias locais e um ambiente que permite intercâmbio contínuo.\n\nQuando visitou Moçambique no segundo ano do ensino secundário, testemunhou realidades que dificultam que as crianças escolham o seu próprio futuro — casamentos infantis, desigualdade educativa e mais. Essa experiência deu origem ao desejo de criar uma sociedade onde as crianças possam ter a sua própria voz e escolher o seu futuro.\n\nContinuámos o intercâmbio online e o intercâmbio Yosakoi, mas sentimos que há coisas que um ecrã não consegue transmitir por completo. Por isso, desta vez vamos a Moçambique em pessoa — para cantar, dançar e ouvir a voz de cada criança no mesmo lugar.",
+      },
       { q: "Como são usados os fundos?", a: "¥770.000 cobrem viagem (¥480k), alojamento (¥90k), material Yosakoi (~¥60k) e taxas da plataforma (~¥139k)." },
       { q: "Quando é a actividade?", a: "Planeada para 6–10 de setembro de 2026. O calendário pode alterar devido a condições locais." },
       { q: "Medidas de segurança?", a: "Trabalhamos com a Shikoku Global Network e coordenadores locais sob supervisão de adultos." },
