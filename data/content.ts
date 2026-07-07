@@ -236,38 +236,14 @@ export const impactGoals = [
   },
 ];
 
-export const members: Member[] = [
+export const membersMeta = [
   {
-    id: "ozaki",
-    name: "尾﨑礼菜",
-    role: "共同代表",
-    origin: "高知県出身・高校3年",
-    bio: [
-      "映画「世界の通学路」を機に発展途上国の貧困格差に関心を持つ。",
-      "公文国際奨学生として15か国を訪問し、ザンビアでの支援活動を経験。",
-      "一方的な支援ではなく、対等に向き合う「共生」をテーマに活動。",
-      "トビタテ！留学JAPAN第11期生としてタンザニア渡航予定。",
-      "よさこい歴11年目。海外で日本の伝統文化を伝える活動にも携わる。",
-    ],
-    message:
-      "言葉が通じなくても、心は通じる。11年間向き合ってきたよさこいを、アフリカの子どもたちと想いを共有するきっかけとして届けたいです。",
+    id: "ozaki" as const,
     instagram: "https://www.instagram.com/rena.osaki?igsh=ZThrcG8wcDhneGNt&utm_source=qr",
     instagramHandle: "rena.osaki",
   },
   {
-    id: "yasunaga",
-    name: "安永百恵",
-    role: "共同代表",
-    origin: "愛媛県出身・高校2年",
-    bio: [
-      "小学校の授業での交流をきっかけにモザンビークに関心を持つ。",
-      "同級生とモザンビークとの交流活動を行うNGOを立ち上げ、活動5年目。",
-      "中学2年時に現地を訪問。児童婚や児童労働などを目の当たりに。",
-      "「子どもが自ら未来を選択できる社会」の実現に向け活動を続ける。",
-      "トビタテ！留学JAPAN第11期生としてモザンビーク渡航予定。",
-    ],
-    message:
-      "「次は日本で会おう。」——あの約束が消えたわけではありません。今度は、子どもたち一人ひとりの声を聞きに行きます。",
+    id: "yasunaga" as const,
     instagram: "https://www.instagram.com/hoyo_mm3?igsh=MW41OGxvYzJqM3FpdQ==",
     instagramHandle: "hoyo_mm3",
   },

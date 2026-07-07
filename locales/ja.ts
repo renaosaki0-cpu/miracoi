@@ -1,4 +1,6 @@
 import type { Dictionary } from "./types";
+import { supporterItemsByLocale } from "./supporterItems";
+import { memberProfilesByLocale } from "./memberProfiles";
 
 /** 日本語ロケール */
 const ja: Dictionary = {
@@ -470,6 +472,7 @@ const ja: Dictionary = {
     submitDescription:
       "Miracoiへの応援メッセージを募集しています。いただいたメッセージは、確認後にWebサイトやSNSで紹介させていただく場合があります。",
     submitButton: "Googleフォームから送る",
+    items: supporterItemsByLocale.ja,
   },
   members: {
     label: "Members",
@@ -479,6 +482,7 @@ const ja: Dictionary = {
       ozaki: "尾﨑礼菜のInstagram",
       yasunaga: "安永百恵のInstagram",
     },
+    profiles: memberProfilesByLocale.ja,
   },
   support: {
     label: "Support",

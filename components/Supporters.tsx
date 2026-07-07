@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLocale } from "@/lib/i18n/context";
 import { SITE } from "@/lib/constants";
-import { supporters, type Supporter } from "@/data/supporters";
+import { buildSupporters, type Supporter } from "@/data/supporters";
 import { layoutClass } from "@/lib/imageLayout";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
@@ -63,6 +63,7 @@ function SupporterCard({
 export function Supporters({ standalone = false }: SupportersProps) {
   const { t } = useLocale();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const supporters = buildSupporters(t.supporters.items);
   const visibleSupporters = standalone ? supporters : supporters.slice(0, PREVIEW_COUNT);
 
   const scroll = (dir: "left" | "right") => {

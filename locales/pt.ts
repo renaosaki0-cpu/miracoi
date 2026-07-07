@@ -1,4 +1,6 @@
 import type { Dictionary } from "./types";
+import { supporterItemsByLocale } from "./supporterItems";
+import { memberProfilesByLocale } from "./memberProfiles";
 
 /** Português (Moçambique) — língua oficial de Moçambique */
 const pt: Dictionary = {
@@ -459,6 +461,7 @@ const pt: Dictionary = {
     submitDescription:
       "Estamos a recolher mensagens de apoio à Miracoi. Após revisão, a sua mensagem poderá ser partilhada no nosso site ou redes sociais.",
     submitButton: "Enviar pelo Google Form",
+    items: supporterItemsByLocale.pt,
   },
   members: {
     label: "Membros",
@@ -468,6 +471,7 @@ const pt: Dictionary = {
       ozaki: "Instagram de Rena Ozaki",
       yasunaga: "Instagram de Momoe Yasunaga",
     },
+    profiles: memberProfilesByLocale.pt,
   },
   support: {
     label: "Apoio",

@@ -1,4 +1,6 @@
 import type { Dictionary } from "./types";
+import { supporterItemsByLocale } from "./supporterItems";
+import { memberProfilesByLocale } from "./memberProfiles";
 
 /** English locale */
 const en: Dictionary = {
@@ -459,6 +461,7 @@ const en: Dictionary = {
     submitDescription:
       "We welcome messages of support for Miracoi. After review, your message may be featured on our website or social media.",
     submitButton: "Submit via Google Form",
+    items: supporterItemsByLocale.en,
   },
   members: {
     label: "Members",
@@ -468,6 +471,7 @@ const en: Dictionary = {
       ozaki: "Rena Ozaki on Instagram",
       yasunaga: "Momoe Yasunaga on Instagram",
     },
+    profiles: memberProfilesByLocale.en,
   },
   support: {
     label: "Support",

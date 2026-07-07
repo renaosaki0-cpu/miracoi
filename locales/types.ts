@@ -200,12 +200,23 @@ export type Dictionary = {
     submitTitle: string;
     submitDescription: string;
     submitButton: string;
+    items: Record<string, { name: string; title: string; message: string }>;
   };
   members: {
     label: string;
     title: string;
     description: string;
     instagramLinks: { ozaki: string; yasunaga: string };
+    profiles: Record<
+      string,
+      {
+        name: string;
+        role: string;
+        origin: string;
+        bio: string[];
+        message: string;
+      }
+    >;
   };
   support: {
     label: string;
