@@ -206,7 +206,6 @@ export type Dictionary = {
     label: string;
     title: string;
     description: string;
-    instagramLinks: { ozaki: string; yasunaga: string };
     profiles: Record<
       string,
       {

@@ -141,13 +141,13 @@ const en: Record<SupporterId, SupporterContent> = {
     name: "Hua Huang",
     title: "High School Teacher, China",
     message:
-      "Dancing Yosakoi with children in Mozambique while carrying their voices into the future is a uniquely powerful idea. So much can travel across cultural walls through smiles and rhythm. I wholeheartedly support Ozaki's international challenge as a high school student.",
+      "Dancing Yosakoi with children in Mozambique while carrying their voices into the future is a uniquely powerful idea. So much can travel across cultural walls through smiles and rhythm. I wholeheartedly support Osaki's international challenge as a high school student.",
   },
   tanaka: {
     name: "Emiko Tanaka",
     title: "Kochi Yosakoi Ambassador · Kizuna International Team Representative",
     message:
-      "Ozaki previously worked with our Kizuna International Team on Yosakoi-based exchange. I sincerely hope Miracoi's challenge will connect to smiles and futures for children in Mozambique through Yosakoi. I look forward to what you do next.",
+      "Osaki previously worked with our Kizuna International Team on Yosakoi-based exchange. I sincerely hope Miracoi's challenge will connect to smiles and futures for children in Mozambique through Yosakoi. I look forward to what you do next.",
   },
   zhang: {
     name: "Songping Zhang",
@@ -159,13 +159,13 @@ const en: Record<SupporterId, SupporterContent> = {
     name: "Yosuke Hayakawa",
     title: "Former Teacher, Shanghai Japanese School (Pudong)",
     message:
-      "When Rena Ozaki was in upper elementary school, I saw a bright, proactive child with a strong core. Seven years later, I am moved to see her step overseas with conviction and take on this challenge. I am fully behind that courageous first step.",
+      "When Rena Osaki was in upper elementary school, I saw a bright, proactive child with a strong core. Seven years later, I am moved to see her step overseas with conviction and take on this challenge. I am fully behind that courageous first step.",
   },
   cai: {
     name: "Jun Cai",
     title: "General Manager, Shanghai Xietong Garments Co., Ltd.",
     message:
-      "I was deeply drawn to Ozaki's challenge of sharing her message with children in Mozambique through Yosakoi dance. Even across language and culture, Yosakoi's rhythm and smiles will surely reach hearts. I hope this becomes a wonderful journey filled with smiles and connection.",
+      "I was deeply drawn to Osaki's challenge of sharing her message with children in Mozambique through Yosakoi dance. Even across language and culture, Yosakoi's rhythm and smiles will surely reach hearts. I hope this becomes a wonderful journey filled with smiles and connection.",
   },
   hibi: {
     name: "Yusuke Hibi",
@@ -246,13 +246,13 @@ const pt: Record<SupporterId, SupporterContent> = {
     name: "Hua Huang",
     title: "Professora do Ensino Secundário, China",
     message:
-      "Dançar Yosakoi com crianças em Moçambique enquanto levam a sua voz ao futuro é uma ideia singularmente poderosa. Muito pode atravessar barreiras culturais através de sorrisos e ritmo. Apoio de coração o desafio internacional da Ozaki como estudante do ensino secundário.",
+      "Dançar Yosakoi com crianças em Moçambique enquanto levam a sua voz ao futuro é uma ideia singularmente poderosa. Muito pode atravessar barreiras culturais através de sorrisos e ritmo. Apoio de coração o desafio internacional da Osaki como estudante do ensino secundário.",
   },
   tanaka: {
     name: "Emiko Tanaka",
     title: "Embaixadora Yosakoi de Kochi · Representante da Equipa Kizuna International",
     message:
-      "A Ozaki trabalhou anteriormente connosco na equipa Kizuna International em intercâmbio através do Yosakoi. Desejo sinceramente que o desafio da Miracoi se ligue aos sorrisos e ao futuro das crianças em Moçambique. Aguardo com expectativa as próximas actividades.",
+      "A Osaki trabalhou anteriormente connosco na equipa Kizuna International em intercâmbio através do Yosakoi. Desejo sinceramente que o desafio da Miracoi se ligue aos sorrisos e ao futuro das crianças em Moçambique. Aguardo com expectativa as próximas actividades.",
   },
   zhang: {
     name: "Songping Zhang",
@@ -264,13 +264,13 @@ const pt: Record<SupporterId, SupporterContent> = {
     name: "Yosuke Hayakawa",
     title: "Ex-Professor, Escola Japonesa de Xangai (Pudong)",
     message:
-      "Quando a Rena Ozaki estava no ensino primário, vi uma criança alegre, proactiva e com um núcleo forte. Sete anos depois, emociona-me vê-la ir para o estrangeiro com convicção. Apoio totalmente esse primeiro passo corajoso.",
+      "Quando a Rena Osaki estava no ensino primário, vi uma criança alegre, proactiva e com um núcleo forte. Sete anos depois, emociona-me vê-la ir para o estrangeiro com convicção. Apoio totalmente esse primeiro passo corajoso.",
   },
   cai: {
     name: "Jun Cai",
     title: "Director-Geral, Shanghai Xietong Garments Co., Ltd.",
     message:
-      "Fiquei profundamente atraído pelo desafio da Ozaki de partilhar a sua mensagem com crianças em Moçambique através da dança Yosakoi. Mesmo através de língua e cultura, o ritmo e os sorrisos do Yosakoi certamente tocarão corações. Espero que seja uma jornada cheia de sorrisos e ligação.",
+      "Fiquei profundamente atraído pelo desafio da Osaki de partilhar a sua mensagem com crianças em Moçambique através da dança Yosakoi. Mesmo através de língua e cultura, o ritmo e os sorrisos do Yosakoi certamente tocarão corações. Espero que seja uma jornada cheia de sorrisos e ligação.",
   },
   hibi: {
     name: "Yusuke Hibi",

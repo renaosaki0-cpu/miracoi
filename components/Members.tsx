@@ -74,9 +74,8 @@ export function Members() {
                           <InstagramIcon className="h-5 w-5" />
                         </span>
                         <span className="min-w-0 text-left">
-                          <span className="block text-sm font-semibold text-text">
-                            {t.members.instagramLinks[memberId]}
-                          </span>
+                          <span className="block text-xs font-medium text-primary">{profile.role}</span>
+                          <span className="block text-sm font-semibold text-text">{profile.name}</span>
                           <span className="block text-xs text-subtext">@{meta.instagramHandle}</span>
                         </span>
                         <span className="ml-auto shrink-0 text-sm font-medium text-primary" aria-hidden>

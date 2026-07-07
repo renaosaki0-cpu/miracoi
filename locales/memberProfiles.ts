@@ -43,7 +43,7 @@ const ja: Record<MemberId, MemberProfile> = {
 
 const en: Record<MemberId, MemberProfile> = {
   ozaki: {
-    name: "Rena Ozaki",
+    name: "Rena Osaki",
     role: "Co-Representative",
     origin: "From Kochi Prefecture · High school senior (Grade 12)",
     bio: [
@@ -74,7 +74,7 @@ const en: Record<MemberId, MemberProfile> = {
 
 const pt: Record<MemberId, MemberProfile> = {
   ozaki: {
-    name: "Rena Ozaki",
+    name: "Rena Osaki",
     role: "Co-Representante",
     origin: "Da Prefeitura de Kochi · 3.º ano do ensino secundário",
     bio: [

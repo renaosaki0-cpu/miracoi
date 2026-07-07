@@ -478,10 +478,6 @@ const ja: Dictionary = {
     label: "Members",
     title: "共同代表",
     description: "高知と愛媛、異なる原体験を持つ2人が、Miracoiを立ち上げました。",
-    instagramLinks: {
-      ozaki: "尾﨑礼菜のInstagram",
-      yasunaga: "安永百恵のInstagram",
-    },
     profiles: memberProfilesByLocale.ja,
   },
   support: {

@@ -52,7 +52,7 @@ const en: Dictionary = {
     description: "The story of Miracoi, born from an unfulfilled promise.",
     quote: "What did she truly want? We may never know the answer.",
     p1: "At 14, Yasunaga met a girl her age in Mozambique. She was supposed to train in Japan, but her parents refused. She married, had a child, and could no longer attend school.",
-    p2: "At 15, Ozaki met street children in Africa. She was too afraid to reach out her hand. Yet they were the ones who smiled and spoke to her first.",
+    p2: "At 15, Osaki met street children in Africa. She was too afraid to reach out her hand. Yet they were the ones who smiled and spoke to her first.",
     p3: "The children we met dream, worry, and think about the future — just like us. This time, we go to listen to each child's voice.",
     highlight: "Even without words, hearts connect — 11 years of Yosakoi becomes our bridge.",
     cta: "Support This Challenge",
@@ -467,10 +467,6 @@ const en: Dictionary = {
     label: "Members",
     title: "Co-Representatives",
     description: "Two leaders from Kochi and Ehime with different origins, united in Miracoi.",
-    instagramLinks: {
-      ozaki: "Rena Ozaki on Instagram",
-      yasunaga: "Momoe Yasunaga on Instagram",
-    },
     profiles: memberProfilesByLocale.en,
   },
   support: {

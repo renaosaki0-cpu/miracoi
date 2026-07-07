@@ -52,7 +52,7 @@ const pt: Dictionary = {
     description: "A história da Miracoi, nascida de uma promessa não cumprida.",
     quote: "O que é que ela realmente desejava? Talvez nunca saibamos a resposta.",
     p1: "Aos 14 anos, Yasunaga conheceu uma rapariga da sua idade em Moçambique. Ela deveria vir formar-se ao Japão, mas os pais recusaram. Casou-se, teve um filho e deixou de poder ir à escola.",
-    p2: "Aos 15 anos, Ozaki conheceu crianças de rua em África. Tinha medo de estender a mão. Mas foram elas que sorriram e lhe falaram primeiro.",
+    p2: "Aos 15 anos, Osaki conheceu crianças de rua em África. Tinha medo de estender a mão. Mas foram elas que sorriram e lhe falaram primeiro.",
     p3: "As crianças que conhecemos sonham, preocupam-se e pensam no futuro — tal como nós. Desta vez, vamos ouvir a voz de cada criança.",
     highlight: "Mesmo sem palavras, os corações ligam-se — 11 anos de Yosakoi tornam-se a nossa ponte.",
     cta: "Apoiar Este Desafio",
@@ -467,10 +467,6 @@ const pt: Dictionary = {
     label: "Membros",
     title: "Co-Representantes",
     description: "Duas líderes de Kochi e Ehime com origens diferentes, unidas na Miracoi.",
-    instagramLinks: {
-      ozaki: "Instagram de Rena Ozaki",
-      yasunaga: "Instagram de Momoe Yasunaga",
-    },
     profiles: memberProfilesByLocale.pt,
   },
   support: {
