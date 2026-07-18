@@ -10,7 +10,8 @@ export const SITE = {
   description:
     "高校生ユニットMiracoi（ミラコイ）は、よさこいを通じてモザンビークの子どもたちの声を聞き、未来へつなぐ国際協力プロジェクトです。",
   url: "https://miracoi.jp",
-  readyforUrl: "https://readyfor.jp/projects/miracoi-mozambique",
+  readyforUrl:
+    "https://readyfor.jp/projects/miracoi-mozambique?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
   readyforPreviewUrl:
     "https://readyfor.jp/app/fundraising/projects/171875/preview",
   instagramUrl: "https://www.instagram.com/mira_coi/",
@@ -19,6 +20,11 @@ export const SITE = {
   supportMessageFormUrl:
     "https://docs.google.com/forms/d/1l19pKCSwgzA-Z_C8_7MX6kQak731A16-63_ECb3XeM8/viewform",
   goalAmount: 770000,
+  /** クラウドファンディング開催期間（JST）— 表示・カウントダウンの唯一のソース */
+  campaign: {
+    start: "2026-07-19T10:00:00+09:00",
+    end: "2026-08-16T23:00:00+09:00",
+  },
   tags: [
     "愛媛県",
     "高知県",

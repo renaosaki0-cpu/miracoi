@@ -34,6 +34,23 @@ function formatJaDateTime(date: Date, options?: { omitYear?: boolean }) {
   return `${datePart}${hour}:${minute}`;
 }
 
+function formatEnDateTime(date: Date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  }).formatToParts(date);
+
+  const get = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find((part) => part.type === type)?.value ?? "";
+
+  return `${get("month")} ${get("day")}, ${get("year")}, ${get("hour")}:${get("minute")} ${get("dayPeriod")}`;
+}
+
 /** クラウドファンディング開催期間の表示 */
 export function formatCampaignPeriod(locale: string, startIso: string, endIso: string) {
   const start = new Date(startIso);
@@ -43,7 +60,11 @@ export function formatCampaignPeriod(locale: string, startIso: string, endIso: s
     const startParts = getJstParts(start);
     const endParts = getJstParts(end);
     const sameYear = startParts.year === endParts.year;
-    return `${formatJaDateTime(start)} 〜 ${formatJaDateTime(end, { omitYear: sameYear })}`;
+    return `${formatJaDateTime(start)} ～ ${formatJaDateTime(end, { omitYear: sameYear })}`;
+  }
+
+  if (locale === "en") {
+    return `${formatEnDateTime(start)} – ${formatEnDateTime(end)} JST`;
   }
 
   const timeZone = "Asia/Tokyo";
@@ -57,10 +78,8 @@ export function formatCampaignPeriod(locale: string, startIso: string, endIso: s
     hour12: false,
   };
 
-  const localeTag = locale === "pt" ? "pt-PT" : "en-US";
-  const startStr = new Intl.DateTimeFormat(localeTag, dateOptions).format(start);
-  const endStr = new Intl.DateTimeFormat(localeTag, dateOptions).format(end);
-  const suffix = locale === "pt" ? " (JST)" : " JST";
+  const startStr = new Intl.DateTimeFormat("pt-PT", dateOptions).format(start);
+  const endStr = new Intl.DateTimeFormat("pt-PT", dateOptions).format(end);
 
-  return `${startStr} – ${endStr}${suffix}`;
+  return `${startStr} – ${endStr} (JST)`;
 }

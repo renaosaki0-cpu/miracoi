@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Inter, Noto_Sans_JP, Zen_Kurenaido } from "next/font/google";
 import { getMiracoiIconSrc } from "@/lib/miracoiIcon";
 import { getOgImageMetadata, getOgImageUrls } from "@/lib/ogImages";
 import "./globals.css";
@@ -15,6 +15,13 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const zenKurenaido = Zen_Kurenaido({
+  variable: "--font-handwritten",
+  subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -58,7 +65,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja" suppressHydrationWarning className={`${notoSansJP.variable} ${inter.variable}`}>
+    <html
+      lang="ja"
+      suppressHydrationWarning
+      className={`${notoSansJP.variable} ${inter.variable} ${zenKurenaido.variable}`}
+    >
       <body suppressHydrationWarning className="min-h-screen bg-background text-text antialiased">
         {children}
       </body>

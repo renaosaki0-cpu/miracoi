@@ -16,7 +16,7 @@ const pt: Dictionary = {
     supporters: "Mensagens",
     faq: "FAQ",
     contact: "Contacto",
-    support: "Apoiar",
+    support: "Apoiar no READYFOR",
     menu: "Abrir menu",
     viewMore: "Ver mais",
     language: "Idioma",
@@ -34,6 +34,25 @@ const pt: Dictionary = {
     copyright: "Miracoi. Todos os direitos reservados.",
     supportCta: "Apoiar no READYFOR",
   },
+  readyfor: {
+    support: "Apoiar no READYFOR",
+    viewProject: "Ver o projecto no READYFOR",
+    readStory: "Ler a história completa no READYFOR",
+    note: "Calendário, orçamento e recompensas estão na página do projecto READYFOR.",
+    detailsOnReadyfor: "Os detalhes completos estão na página do projecto READYFOR.",
+  },
+  projectSummary: {
+    title: "Setembro de 2026, em Moçambique",
+    description:
+      "Dois estudantes do ensino secundário ouvem a voz de cada criança através do Yosakoi e do diálogo — e ligam essas vozes ao futuro.",
+    points: [
+      "Visitar três escolas e aldeias para workshops de Yosakoi",
+      "Ouvir os sonhos das crianças e criar uma música original",
+      "Continuar o intercâmbio após regressar ao Japão",
+    ],
+    readyforNote: "Locais, calendário, orçamento e recompensas estão no READYFOR.",
+    cta: "Ver o projecto no READYFOR",
+  },
   hero: {
     eyebrow: "Projeto Internacional de Cooperação — Ensino Secundário",
     titleLine1: "Aquela promessa—",
@@ -41,9 +60,9 @@ const pt: Dictionary = {
     subtitle: "Setembro de 2026: vamos a Moçambique ouvir a voz das crianças.",
     description:
       "Dois estudantes do ensino secundário precisam de ¥770.000 e do seu apoio. Cada contribuição ajuda a mudar o futuro das crianças.",
-    ctaSupport: "Apoiar",
-    ctaExplore: "Ver Actividades",
-    ctaNote: "Apoie com segurança e facilidade via READYFOR",
+    ctaSupport: "Apoiar no READYFOR",
+    ctaExplore: "Ver o projecto no READYFOR",
+    ctaNote: "Detalhes e formas de apoio estão na página READYFOR.",
     scroll: "Deslizar",
   },
   story: {
@@ -63,13 +82,13 @@ const pt: Dictionary = {
     },
   },
   mission: {
-    label: "Missão",
-    title: "Unidade Miracoi — Ensino Secundário",
-    description: "Apresentamos a filosofia e os objectivos da Miracoi.",
+    label: "",
+    title: "O que nos importa",
+    description: "O que dois estudantes do ensino secundário valorizam ao encontrar crianças em Moçambique como iguais.",
     cards: [
-      { label: "Missão", title: "Vozes para o futuro", description: "Entregar a voz das crianças em Moçambique como experiências inesquecíveis através do Yosakoi." },
-      { label: "Visão", title: "Um mundo conectado e igual", description: "Crianças em Moçambique, Japão e no mundo aprendem umas com as outras e levantam a sua voz." },
-      { label: "Valor", title: "Aprender e expressar juntos", description: "Não ajuda, mas simbiose. Não ensinar, mas mover, soar e expressar juntos como iguais." },
+      { label: "", title: "Vozes para o futuro", description: "Através do Yosakoi, queremos acolher a voz de cada criança e ligá-la ao futuro." },
+      { label: "", title: "Juntos, não ensinar", description: "Não ajuda, mas simbiose — cantar, dançar e aprender no mesmo espaço." },
+      { label: "", title: "Não é uma visita única", description: "Queremos continuar o intercâmbio que construímos ao longo de cinco anos." },
     ],
   },
   projectCore: {
@@ -455,7 +474,7 @@ const pt: Dictionary = {
     close: "Fechar",
     ctaTitle: "Junte-se a nós para ligar a voz das crianças ao futuro.",
     ctaSubtitle: "Muitas pessoas estão a apoiar o desafio da Miracoi.",
-    ctaSupport: "Apoiar",
+    ctaSupport: "Apoiar no READYFOR",
     viewAll: "Ver Tudo",
     submitTitle: "Enviar Mensagem de Apoio",
     submitDescription:
@@ -485,6 +504,7 @@ const pt: Dictionary = {
     countdownEnded: "Projeto encerrado",
     countdownDays: "d",
     countdownHours: "h",
+    countdownDaysUntilStart: " d",
     beforeStartNote: "Os totais de apoio serão actualizados após o início da campanha",
     goalRemaining: { before: "Faltam ", after: " para atingir a meta", amountFirst: false },
     goalAchieved: "Meta atingida!",
@@ -586,28 +606,20 @@ const pt: Dictionary = {
   faq: {
     label: "FAQ",
     title: "Perguntas Frequentes",
-    description: "Perguntas comuns sobre apoio e actividades.",
+    description: "Mais respostas estão na página do projecto READYFOR.",
     items: [
-      { q: "O que é a Miracoi?", a: "Mirai (Futuro) × Yosakoi. Uma unidade de estudantes do ensino secundário que liga a voz das crianças ao futuro através da dança e da música." },
-      {
-        q: "Porquê Moçambique?",
-        a: "A co-representante Momoe Yasunaga mantém intercâmbio com Moçambique há mais de 5 anos desde o ensino primário — este é o ponto de partida deste projecto. Temos relações de confiança com escolas e aldeias locais e um ambiente que permite intercâmbio contínuo.\n\nQuando visitou Moçambique no segundo ano do ensino secundário, testemunhou realidades que dificultam que as crianças escolham o seu próprio futuro — casamentos infantis, desigualdade educativa e mais. Essa experiência deu origem ao desejo de criar uma sociedade onde as crianças possam ter a sua própria voz e escolher o seu futuro.\n\nContinuámos o intercâmbio online e o intercâmbio Yosakoi, mas sentimos que há coisas que um ecrã não consegue transmitir por completo. Por isso, desta vez vamos a Moçambique em pessoa — para cantar, dançar e ouvir a voz de cada criança no mesmo lugar.",
-      },
-      { q: "Como são usados os fundos?", a: "¥770.000 cobrem viagem (¥480k), alojamento (¥90k), material Yosakoi (~¥60k) e taxas da plataforma (~¥139k)." },
-      { q: "Quando é a actividade?", a: "Planeada para 6–10 de setembro de 2026. O calendário pode alterar devido a condições locais." },
-      { q: "Medidas de segurança?", a: "Trabalhamos com a Shikoku Global Network e coordenadores locais sob supervisão de adultos." },
-      { q: "Quem pode apoiar?", a: "Qualquer pessoa — individual ou organização — através da nossa página READYFOR." },
-      { q: "Qual é o período da campanha de crowdfunding?", a: "De 12 de julho de 2026 às 23:00 até 4 de setembro de 2026 às 23:00 (JST)." },
+      { q: "O que é a Miracoi?", a: "Uma unidade de estudantes do ensino secundário que liga a voz das crianças em Moçambique ao futuro através do Yosakoi." },
+      { q: "Como são usados os fundos?", a: "Para viagem, alojamento, material Yosakoi e actividades no terreno. Ver READYFOR para o detalhe." },
+      { q: "Quem pode apoiar?", a: "Qualquer pessoa — individual ou organização — através da página READYFOR." },
     ],
   },
   cta: {
-    label: "Junte-se",
+    label: "",
     title: '"Vejo-te no Japão"—agora é a nossa vez de ir encontrá-las.',
-    description:
-      "O seu apoio transforma-se em viagem, naruko e sorrisos das crianças. Ajude-nos a ligar a voz delas ao futuro.",
-    support: "Apoiar",
+    description: "O seu apoio liga a voz das crianças ao futuro.",
+    support: "Apoiar no READYFOR",
     messages: "Ver Mensagens",
-    quote: "Mesmo sem palavras, os corações ligam-se.",
+    quote: "",
   },
   contact: {
     label: "Contacto",

@@ -37,6 +37,20 @@ export type Dictionary = {
     ctaNote: string;
     scroll: string;
   };
+  readyfor: {
+    support: string;
+    viewProject: string;
+    readStory: string;
+    note: string;
+    detailsOnReadyfor: string;
+  };
+  projectSummary: {
+    title: string;
+    description: string;
+    points: string[];
+    readyforNote: string;
+    cta: string;
+  };
   story: {
     label: string;
     title: string;
@@ -233,6 +247,7 @@ export type Dictionary = {
     countdownEnded: string;
     countdownDays: string;
     countdownHours: string;
+    countdownDaysUntilStart: string;
     beforeStartNote: string;
     goalRemaining: { before: string; after: string; amountFirst: boolean };
     goalAchieved: string;

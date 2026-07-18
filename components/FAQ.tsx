@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocale } from "@/lib/i18n/context";
 import { ScrollReveal } from "./ui/ScrollReveal";
+import { CTAButton } from "./ui/CTAButton";
 
 export function FAQ() {
   const { t } = useLocale();
@@ -12,9 +13,8 @@ export function FAQ() {
   return (
     <section id="faq" className="section-padding bg-section-white">
       <div className="container-main max-w-3xl">
-        <ScrollReveal className="mb-12 text-center md:mb-16">
-          <p className="section-label">{t.faq.label}</p>
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl">{t.faq.title}</h2>
+        <ScrollReveal className="mb-10 text-center md:mb-12">
+          <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl md:text-4xl">{t.faq.title}</h2>
           <p className="mx-auto mt-4 max-w-lg text-sm text-subtext md:text-base">{t.faq.description}</p>
         </ScrollReveal>
 
@@ -23,7 +23,7 @@ export function FAQ() {
             const isOpen = openIndex === index;
             return (
               <ScrollReveal key={item.q} delay={index * 0.04}>
-                <div className="card-surface overflow-hidden transition-shadow hover:shadow-md">
+                <div className="card-surface overflow-hidden">
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -56,6 +56,12 @@ export function FAQ() {
             );
           })}
         </div>
+
+        <ScrollReveal className="mt-12 text-center">
+          <CTAButton variant="primary" size="lg" className="w-full min-h-12 sm:w-auto sm:min-w-[280px]">
+            {t.readyfor.viewProject}
+          </CTAButton>
+        </ScrollReveal>
       </div>
     </section>
   );
