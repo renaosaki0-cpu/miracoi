@@ -22,31 +22,34 @@ export function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative -mt-14 min-h-[90svh] overflow-hidden sm:-mt-16 md:-mt-[4.5rem] md:min-h-[100svh]"
+      className="relative -mt-14 min-h-[90svh] sm:-mt-16 md:-mt-[4.5rem] md:min-h-[100svh]"
     >
-      <motion.div style={{ y: imageY, scale: imageScale }} className="absolute inset-0 h-[115%] w-full origin-center">
-        <MiraiImage
-          src={resolveImage("hero")}
-          alt="モザンビークの子どもたちと交流するMiracoiメンバー"
-          fill
-          priority
-          sizes="100vw"
-          className="h-full w-full"
-          imageClassName={layoutClass("hero")}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5" />
-      </motion.div>
+      {/* 画像レイヤー — パララックス用の overflow-hidden はここだけに閉じ込め、本文は絶対にクリップしない */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div style={{ y: imageY, scale: imageScale }} className="h-[115%] w-full origin-center">
+          <MiraiImage
+            src={resolveImage("hero")}
+            alt="モザンビークの子どもたちと交流するMiracoiメンバー"
+            fill
+            priority
+            sizes="100vw"
+            className="h-full w-full"
+            imageClassName={layoutClass("hero")}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5" />
+        </motion.div>
+      </div>
 
       <motion.div
         style={{ opacity: contentOpacity }}
-        className="relative z-10 flex h-full flex-col justify-end container-main pb-28 sm:pb-32 md:pb-36"
+        className="relative z-10 flex min-h-[90svh] flex-col justify-center container-main pt-28 pb-16 sm:pt-32 sm:pb-20 md:min-h-[100svh] md:pt-36 md:pb-24"
       >
         <p className="mb-4 text-xs font-medium tracking-[0.2em] text-white/75 sm:text-sm">
           {t.hero.eyebrow}
         </p>
         <EmotionalPhrase
           as="h1"
-          className="max-w-3xl text-[2.1rem] leading-[1.3] text-white sm:text-5xl md:text-[3.4rem]"
+          className="max-w-3xl py-1 text-[2.1rem] leading-[1.5] text-white sm:text-5xl sm:leading-[1.45] md:text-[3.4rem] md:leading-[1.4]"
         >
           {t.hero.title}
         </EmotionalPhrase>
