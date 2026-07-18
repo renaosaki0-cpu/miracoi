@@ -1,12 +1,15 @@
 "use client";
 
-import type { HomeNarrativeIdeasSection, HomeNarrativeSection } from "@/locales/types";
+import type { HomeNarrativeActivitiesSection, HomeNarrativeSection } from "@/locales/types";
 import { useLocale } from "@/lib/i18n/context";
 import { resolveImage, resolveProjectTabImage } from "@/lib/images";
 import { layoutClass } from "@/lib/imageLayout";
-import { CTAButton } from "./ui/CTAButton";
+import { EmotionalPhrase } from "./ui/EmotionalPhrase";
+import { ProjectActivityCard } from "./ui/ProjectActivityCard";
+import { ReadyforCTA } from "./ui/ReadyforCTA";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
+import { SectionHeading } from "./ui/SectionHeading";
 
 type ProseSectionProps = {
   id: string;
@@ -27,9 +30,6 @@ function ProseSection({
   reversed = false,
   bgClass,
 }: ProseSectionProps) {
-  const { locale } = useLocale();
-  const handwritten = locale === "ja" ? "font-handwritten" : "";
-
   return (
     <section id={id} className={`section-padding scroll-mt-20 md:scroll-mt-24 ${bgClass}`}>
       <div className="container-main max-w-5xl">
@@ -51,10 +51,7 @@ function ProseSection({
           </ScrollReveal>
 
           <ScrollReveal delay={0.08} className="lg:[direction:ltr]">
-            <p className="section-label">{section.label}</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-text sm:text-3xl md:text-[2rem]">
-              {section.title}
-            </h2>
+            <SectionHeading label={section.label} title={section.title} />
             <div className="mt-5 space-y-3">
               {section.lines.map((line) => (
                 <p key={line} className="text-base leading-[1.9] text-subtext">
@@ -62,15 +59,13 @@ function ProseSection({
                 </p>
               ))}
             </div>
-            {section.emphasis && (
-              <p className={`mt-5 text-xl leading-snug text-primary sm:text-2xl ${handwritten || "font-semibold tracking-tight"}`}>
+            {section.emphasis ? (
+              <EmotionalPhrase as="p" className="mt-5 text-xl leading-snug text-primary sm:text-2xl">
                 {section.emphasis}
-              </p>
-            )}
+              </EmotionalPhrase>
+            ) : null}
             <div className="mt-8">
-              <CTAButton variant="primary" size="md" className="w-full min-h-12 sm:w-auto">
-                {section.cta}
-              </CTAButton>
+              <ReadyforCTA size="md">{section.cta}</ReadyforCTA>
             </div>
           </ScrollReveal>
         </div>
@@ -79,59 +74,56 @@ function ProseSection({
   );
 }
 
-type IdeasSectionProps = {
-  section: HomeNarrativeIdeasSection;
-  imageSrc: string | null;
-  imageAlt: string;
+type ActivitiesSectionProps = {
+  id: string;
+  section: HomeNarrativeActivitiesSection;
+  images: { src: string | null; alt: string; imageClassName?: string }[];
   bgClass: string;
 };
 
-function IdeasSection({ section, imageSrc, imageAlt, bgClass }: IdeasSectionProps) {
+function ActivitiesSection({ id, section, images, bgClass }: ActivitiesSectionProps) {
   return (
-    <section id="hope" className={`section-padding ${bgClass}`}>
+    <section id={id} className={`section-padding scroll-mt-20 md:scroll-mt-24 ${bgClass}`}>
       <div className="container-main max-w-5xl">
-        <ScrollReveal className="mb-8 text-center md:mb-10">
-          <p className="section-label">{section.label}</p>
-          <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl md:text-[2rem]">{section.title}</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-[1.9] text-subtext">{section.intro}</p>
-        </ScrollReveal>
-
         <ScrollReveal>
-          <div className="overflow-hidden rounded-[2rem] shadow-sm ring-1 ring-black/[0.04]">
-            <MiraiImage
-              src={imageSrc}
-              alt={imageAlt}
-              className="aspect-[16/9] w-full sm:aspect-[21/9]"
-              imageClassName={layoutClass("projectGoals")}
-              sizes="(max-width: 768px) 100vw, 960px"
-            />
-          </div>
+          <SectionHeading
+            align="center"
+            label={section.label}
+            title={section.title}
+            lead={section.intro}
+            className="mb-10 md:mb-12"
+          />
         </ScrollReveal>
 
-        <ul className="mt-8 grid gap-4 sm:grid-cols-3 md:mt-10">
-          {section.ideas.map((idea, i) => (
-            <ScrollReveal key={idea} delay={i * 0.06}>
-              <li className="flex h-full flex-col rounded-[1.5rem] bg-white/85 px-5 py-6 text-center shadow-sm ring-1 ring-black/[0.04] md:px-6 md:py-8">
-                <span className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary">
-                  {i + 1}
-                </span>
-                <p className="text-base font-bold leading-snug text-text md:text-lg">{idea}</p>
-              </li>
+        <ul className="grid gap-6 lg:grid-cols-3">
+          {section.activities.map((activity, i) => (
+            <ScrollReveal key={activity.title} delay={i * 0.08} className="h-full">
+              <ProjectActivityCard
+                index={i + 1}
+                title={activity.title}
+                description={activity.description}
+                imageSrc={images[i]?.src ?? null}
+                imageAlt={images[i]?.alt ?? activity.title}
+                imageClassName={images[i]?.imageClassName}
+              />
             </ScrollReveal>
           ))}
         </ul>
 
-        <ScrollReveal className="mt-8 text-center md:mt-10">
-          <CTAButton variant="primary" size="md" className="w-full min-h-12 sm:w-auto">
-            {section.cta}
-          </CTAButton>
+        <ScrollReveal className="mt-10 text-center md:mt-12" delay={0.15}>
+          <EmotionalPhrase as="p" className="text-xl leading-snug text-primary sm:text-2xl">
+            {section.emphasis}
+          </EmotionalPhrase>
+          <div className="mt-6">
+            <ReadyforCTA size="md">{section.cta}</ReadyforCTA>
+          </div>
         </ScrollReveal>
       </div>
     </section>
   );
 }
 
-/** Who we are — first narrative block on the homepage */
+/** Miracoiとは — 最初の物語ブロック */
 export function WhoWeAre() {
   const { t } = useLocale();
 
@@ -147,43 +139,51 @@ export function WhoWeAre() {
   );
 }
 
-/** Mozambique, hope, difference, and after — narrative blocks after the founders' story */
+/** なぜ始めたのか、モザンビークで行うこと、帰国後につなげたい未来 — 共同代表2人の想いの前後をつなぐ物語 */
 export function HomeNarrativeSections() {
   const { t } = useLocale();
 
   return (
     <>
       <ProseSection
-        id="mozambique"
-        section={t.home.whyMozambique}
+        id="why"
+        section={t.home.whyStarted}
         imageSrc={resolveProjectTabImage("why-mozambique")}
-        imageAlt={t.home.whyMozambique.title}
+        imageAlt={t.home.whyStarted.title}
         imageLayout={layoutClass("projectExplain")}
         reversed
         bgClass="bg-section-white"
       />
-      <IdeasSection
-        section={t.home.whatWeHope}
-        imageSrc={resolveProjectTabImage("goals")}
-        imageAlt={t.home.whatWeHope.title}
+      <ActivitiesSection
+        id="project"
+        section={t.home.project}
+        images={[
+          { src: resolveProjectTabImage("goals"), alt: t.home.project.activities[0]?.title ?? "" },
+          {
+            src: resolveImage("storyLearning"),
+            alt: t.home.project.activities[1]?.title ?? "",
+            imageClassName: layoutClass("storyLearning"),
+          },
+          {
+            src: resolveProjectTabImage("original-song"),
+            alt: t.home.project.activities[2]?.title ?? "",
+          },
+        ]}
         bgClass="bg-section-warm"
       />
-      <ProseSection
-        id="difference"
-        section={t.home.whatMakesDifferent}
-        imageSrc={resolveImage("storyLearning")}
-        imageAlt={t.home.whatMakesDifferent.title}
-        imageLayout={layoutClass("storyLearning")}
-        reversed
-        bgClass="bg-section-cream"
-      />
+      {/*
+        TODO(images): 「帰国後につなげたい未来」に本当にふさわしい実写がまだありません。
+        現在は現地訪問前の日本国内での報告・準備の様子（gallery7）を仮で使用しています。
+        理想的には、帰国後の報告会・学校訪問でモザンビークの子どもたちの映像や手紙を紹介している様子、
+        オンライン交流の様子、または現地の子どもたちと今後の再会を約束している写真などに差し替えてください。
+      */}
       <ProseSection
         id="after"
         section={t.home.afterProject}
-        imageSrc={resolveProjectTabImage("local-activities")}
+        imageSrc={resolveProjectTabImage("schedule")}
         imageAlt={t.home.afterProject.title}
         imageLayout={layoutClass("project")}
-        bgClass="bg-section-white"
+        bgClass="bg-section-cream"
       />
     </>
   );

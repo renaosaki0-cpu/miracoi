@@ -9,6 +9,7 @@ import { layoutClass } from "@/lib/imageLayout";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
 import { CTAButton } from "./ui/CTAButton";
+import { ReadyforCTA } from "./ui/ReadyforCTA";
 
 const PREVIEW_COUNT = 6;
 
@@ -109,9 +110,9 @@ export function Supporters({ standalone = false }: SupportersProps) {
         )}
 
         <ScrollReveal className="mt-10 text-center md:mt-12">
-          <CTAButton variant="primary" size="lg" className="w-full min-h-12 sm:w-auto sm:min-w-[280px]">
+          <ReadyforCTA size="lg" className="sm:min-w-[280px]">
             {t.supporters.ctaSupport}
-          </CTAButton>
+          </ReadyforCTA>
         </ScrollReveal>
       </div>
     </section>

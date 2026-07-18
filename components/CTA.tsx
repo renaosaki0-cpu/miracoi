@@ -4,13 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLocale } from "@/lib/i18n/context";
 import { CTAButton } from "./ui/CTAButton";
+import { EmotionalPhrase } from "./ui/EmotionalPhrase";
 import { resolveImage } from "@/lib/images";
 import { layoutClass } from "@/lib/imageLayout";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
 
 export function CTA() {
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const bgY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
@@ -32,13 +33,9 @@ export function CTA() {
 
       <div className="container-main relative z-10 text-center">
         <ScrollReveal>
-          <p
-            className={`text-3xl leading-snug text-white sm:text-4xl md:text-5xl ${
-              locale === "ja" ? "font-handwritten" : "font-bold tracking-tight"
-            }`}
-          >
+          <EmotionalPhrase as="p" className="text-3xl leading-snug text-white sm:text-4xl md:text-5xl">
             {t.cta.quote}
-          </p>
+          </EmotionalPhrase>
           <h2 className="mx-auto mt-4 max-w-lg text-base font-semibold leading-relaxed text-white/95 sm:text-lg">
             {t.cta.title}
           </h2>

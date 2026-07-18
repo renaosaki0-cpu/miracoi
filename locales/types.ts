@@ -5,6 +5,7 @@ export type Dictionary = {
     home: string;
     about: string;
     ourStory: string;
+    activities: string;
     project: string;
     gallery: string;
     returns: string;
@@ -31,9 +32,11 @@ export type Dictionary = {
   };
   hero: {
     eyebrow: string;
+    /** Short, handwritten emotional headline — the only hero text using the handwritten font */
     title: string;
     subtitleLines: string[];
-    cta: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
   };
   readyfor: {
     support: string;
@@ -46,10 +49,13 @@ export type Dictionary = {
     detailsOnReadyfor: string;
   };
   home: {
+    /** 「Miracoiとは」— Mirai × Yosakoi, kept personal and non-corporate */
     whoWeAre: HomeNarrativeSection;
-    whyMozambique: HomeNarrativeSection;
-    whatWeHope: HomeNarrativeIdeasSection;
-    whatMakesDifferent: HomeNarrativeSection;
+    /** 「なぜ始めたのか」— short emotional teaser, links to the full story on READYFOR */
+    whyStarted: HomeNarrativeSection;
+    /** 「私たちがモザンビークで行うこと」— the three on-the-ground activities */
+    project: HomeNarrativeActivitiesSection;
+    /** 「帰国後につなげたい未来」— how the relationship continues after the trip */
     afterProject: HomeNarrativeSection;
   };
   projectSummary: {
@@ -59,24 +65,20 @@ export type Dictionary = {
     readyforNote: string;
     cta: string;
   };
+  /** 「共同代表2人の想い」— balanced founder cards + shared statement */
   story: {
     label: string;
     title: string;
-    description: string;
-    quote: string;
+    /** Short lead-in above the two founder cards */
+    intro: string;
     p1: string;
     p2: string;
-    p3: string;
-    highlight: string;
     cta: string;
-    /** Short, personal, handwritten-style statement marking the emotional turning point */
-    turningPoint: string;
     sharedVision: {
-      line1: string;
-      line2: string;
+      /** Short, handwritten emotional statement shared by both founders */
+      emphasis: string;
       body: string;
     };
-    learningPhoto: { alt: string; caption: string };
   };
   mission: {
     label: string;
@@ -346,11 +348,18 @@ export type HomeNarrativeSection = {
   emphasis?: string;
 };
 
-export type HomeNarrativeIdeasSection = {
+export type ProjectActivity = {
+  title: string;
+  description: string;
+};
+
+export type HomeNarrativeActivitiesSection = {
   label: string;
   title: string;
   intro: string;
-  ideas: string[];
+  activities: ProjectActivity[];
+  /** Short, personal, handwritten-style statement */
+  emphasis: string;
   cta: string;
 };
 

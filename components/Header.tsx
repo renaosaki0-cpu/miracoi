@@ -10,9 +10,10 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MiracoiIcon } from "./ui/MiracoiIcon";
 
 const NAV_ITEMS = [
-  { id: "home", href: "/#hero" },
+  { id: "home", href: "/#home" },
   { id: "about", href: "/#about" },
   { id: "ourStory", href: "/#story" },
+  { id: "activities", href: "/#project" },
   { id: "supporters", href: "/#supporters" },
   { id: "contact", href: "/contact" },
 ] as const;
@@ -29,6 +30,7 @@ export function Header() {
     home: t.nav.home,
     about: t.nav.about,
     ourStory: t.nav.ourStory,
+    activities: t.nav.activities,
     supporters: t.nav.supporters,
     contact: t.nav.contact,
   };
@@ -61,7 +63,7 @@ export function Header() {
             <Link
               key={item.id}
               href={item.href}
-              className="relative shrink-0 whitespace-nowrap rounded-full px-2 py-2 text-[0.7rem] font-medium text-white/90 transition-colors hover:text-primary xl:px-3 xl:text-sm"
+              className="relative shrink-0 whitespace-nowrap rounded-full px-1.5 py-2 text-[0.64rem] font-medium text-white/90 transition-colors hover:text-primary lg:px-2 xl:px-3 xl:text-sm"
             >
               {navLabels[item.id]}
             </Link>

@@ -13,6 +13,7 @@ const en: Dictionary = {
     home: "Home",
     about: "About Miracoi",
     ourStory: "Our Story",
+    activities: "What We Do",
     project: "Project",
     gallery: "Gallery",
     returns: "Returns",
@@ -49,49 +50,55 @@ const en: Dictionary = {
   },
   home: {
     whoWeAre: {
-      label: "Who we are",
-      title: "We are Miracoi",
+      label: "About Miracoi",
+      title: "What is Miracoi?",
       lines: [
         "Mirai (future) × Yosakoi — a name two high school students chose together.",
-        "We believe international cooperation begins not by helping someone, but by listening to each person's voice.",
+        "We believe it starts not with helping someone, but with listening to each person's voice.",
       ],
-      emphasis: "It starts with listening.",
       cta: "Discover Miracoi",
     },
-    whyMozambique: {
-      label: "Why Mozambique",
-      title: "Why Mozambique",
+    whyStarted: {
+      label: "Why we started",
+      title: '"See you in Japan."',
       lines: [
-        "It is not just a place with challenges.",
-        "It is filled with culture, dreams, and people we have built relationships with over many years.",
-        "That is why we are returning there.",
+        "We once believed we understood children in Africa — without truly listening. Realizing we had kept our distance is how Miracoi began.",
       ],
-      cta: "See Our Ties to Mozambique",
+      emphasis: "We don't want to stop at thinking we understood.",
+      cta: "Read the Full Story on READYFOR",
     },
-    whatWeHope: {
-      label: "What we hope",
-      title: "What we hope to do",
-      intro: "The details live on READYFOR. Here are three simple ideas we hold onto.",
-      ideas: ["Connect through Yosakoi", "Listen to each child's voice", "Carry those voices across borders and into the future"],
-      cta: "Explore the Project",
-    },
-    whatMakesDifferent: {
-      label: "What makes us different",
-      title: "What makes Miracoi different",
-      lines: [
-        "We do not want a one-way relationship of helping and being helped.",
-        "We hope to create dialogue where children in Japan and Mozambique can learn from one another.",
+    project: {
+      label: "What we will do in Mozambique",
+      title: "What we will do in Mozambique",
+      intro: "Three activities we will carry out on the ground. Full details are on READYFOR.",
+      activities: [
+        {
+          title: "Connecting through Yosakoi",
+          description: "Dancing together with about 80–100 children, using naruko clappers.",
+        },
+        {
+          title: "Listening to each voice",
+          description:
+            "Talking with about 10–20 children about their dreams, worries, favorite things, and what matters to them.",
+        },
+        {
+          title: "Carrying it to Japan",
+          description:
+            "Sharing what we hear and experience through video, social media, and report sessions back in Japan.",
+        },
       ],
-      cta: "See How We Connect",
+      emphasis: "It starts with listening.",
+      cta: "See the Full Activities on READYFOR",
     },
     afterProject: {
-      label: "After the project",
-      title: "The conversations continue",
+      label: "The future we want to continue building",
+      title: "The future we want to continue building",
       lines: [
         "What begins on the ground does not end when we return to Japan.",
-        "Through storytelling, schools, and future exchanges — we will keep carrying voices into the future.",
+        "Report sessions, school presentations, messages between children, and ongoing online exchange — we will keep carrying this relationship into the future.",
       ],
-      cta: "See What Comes Next",
+      emphasis: "Building the future, together.",
+      cta: "See What Comes Next on READYFOR",
     },
   },
   projectSummary: {
@@ -114,30 +121,21 @@ const en: Dictionary = {
       "and Mozambique through Yosakoi —",
       "carrying each voice into the future.",
     ],
-    cta: "Learn More About This Journey",
+    ctaPrimary: "Support This Journey",
+    ctaSecondary: "Learn More About the Project",
   },
   story: {
-    label: "Why we started",
-    title: '"See you in Japan."',
-    description:
-      "We once thought we understood children in Africa — without truly listening. When we realized we had kept our distance, Miracoi was born.",
-    quote: "What did she truly want? We may never know the answer.",
+    label: "Founders' Story",
+    title: "Our Founders' Story",
+    intro:
+      '"See you in Japan." Two students from Kochi and Ehime, shaped by different experiences, founded Miracoi to keep that promise.',
     p1: "At 14, Co-Representative Yasunaga met a girl her age in Mozambique. She was supposed to train in Japan, but the promise was never kept — and she could no longer attend school.",
     p2: "At 15, Co-Representative Osaki met street children in Africa. She was too afraid to reach out. They smiled and spoke to her first.",
-    p3: "This time, we go to listen to each child's voice.",
-    highlight: "Even without words, hearts connect — 11 years of Yosakoi is our bridge.",
-    turningPoint: "We don't want to stop at thinking we understood.",
     sharedVision: {
-      line1: "Two different experiences.",
-      line2: "One shared vision.",
-      body: "Mozambique and Zambia. An unkept promise—and children who reached out first. Our paths were different, but together they became Miracoi.",
+      emphasis: "Different experiences. One shared feeling.",
+      body: "We want to listen to every child's voice.",
     },
-    cta: "Read Our Story",
-    learningPhoto: {
-      alt: "Learning together with local children on site",
-      caption:
-        "Learning how to use a sewing machine from local community members. We value time learning from each other — not teaching or being taught, but learning together.",
-    },
+    cta: "Read More of Their Story",
   },
   mission: {
     label: "",
@@ -677,7 +675,7 @@ const en: Dictionary = {
     description: "Your support connects children's voices to the future.",
     support: "Support This Journey",
     messages: "View Messages",
-    quote: "Building the future, together.",
+    quote: "That promise — this time, we want to keep it.",
   },
   contact: {
     label: "Contact",

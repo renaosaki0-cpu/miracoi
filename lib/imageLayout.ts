@@ -5,6 +5,10 @@ export const IMAGE_LAYOUT = {
   storyLearning: "object-cover object-center",
   ctaBg: "object-cover object-center",
   member: "object-cover object-[center_22%]",
+  /** 尾﨑（横位置の元画像）— 顔まわりを基準にトリミング */
+  founderOzaki: "object-cover object-[center_18%]",
+  /** 安永（元画像に余白が多いため軽くズームして顔を大きく） */
+  founderYasunaga: "object-cover object-[center_8%] scale-125",
   supporter: "object-cover object-[center_20%]",
   projectGoals: "object-cover object-[center_42%]",
   /** 地図・文字入り説明画像 — 全体表示 */
