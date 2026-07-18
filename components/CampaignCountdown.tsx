@@ -2,38 +2,66 @@
 
 import { useLocale } from "@/lib/i18n/context";
 import { useCampaignCountdown } from "@/lib/useCampaignCountdown";
+import type { CampaignPhase } from "@/lib/campaignCountdown";
 
 type CampaignCountdownProps = {
   variant?: "banner" | "compact";
 };
 
-function CountdownUnits({
+function formatCountdownText(
+  locale: string,
+  status: CampaignPhase,
+  label: string,
+  days: number,
+  hours: number,
+  daysUnit: string,
+  daysUntilStartUnit: string,
+  hoursUnit: string,
+): string {
+  const daySuffix = status === "upcoming" ? daysUntilStartUnit : daysUnit;
+
+  if (days > 0) {
+    return `${label}${days}${daySuffix}`;
+  }
+  if (hours > 0) {
+    return `${label}${hours}${hoursUnit}`;
+  }
+  return locale === "ja" ? `${label}まもなく終了！` : `${label}Ending soon!`;
+}
+
+function CountdownDisplay({
   days,
   hours,
+  label,
+  status,
   size = "lg",
 }: {
   days: number;
   hours: number;
+  label: string;
+  status: CampaignPhase;
   size?: "lg" | "sm";
 }) {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
+  const text = formatCountdownText(
+    locale,
+    status,
+    label,
+    days,
+    hours,
+    t.support.countdownDays,
+    t.support.countdownDaysUntilStart,
+    t.support.countdownHours,
+  );
   const large = size === "lg";
 
   return (
-    <p className={`font-en font-bold leading-none tracking-tight ${large ? "text-5xl sm:text-6xl" : "text-base"}`}>
-      {days}
-      <span className={`font-bold ${large ? "ml-1.5 text-2xl sm:text-3xl" : "ml-0.5 text-sm"}`}>
-        {t.support.countdownDays}
-      </span>
-      {(days > 0 || hours > 0) && (
-        <>
-          <span className={`mx-2 font-normal text-white/60 ${large ? "text-2xl sm:text-3xl" : "text-sm"}`}> </span>
-          {hours}
-          <span className={`font-bold ${large ? "ml-1 text-xl sm:text-2xl" : "ml-0.5 text-sm"}`}>
-            {t.support.countdownHours}
-          </span>
-        </>
-      )}
+    <p
+      className={`font-bold leading-snug tracking-tight ${
+        large ? "text-3xl sm:text-4xl md:text-5xl" : "text-sm sm:text-base"
+      } ${locale === "ja" && large ? "font-handwritten" : "font-en"}`}
+    >
+      {text}
     </p>
   );
 }
@@ -57,27 +85,14 @@ export function CampaignCountdown({ variant = "banner" }: CampaignCountdownProps
   if (variant === "compact") {
     return (
       <p className="text-center text-sm font-semibold text-primary sm:text-left">
-        {label}{" "}
-        <span className="font-en text-base">
-          {days}
-          {t.support.countdownDays}
-          {hours > 0 && (
-            <>
-              {hours}
-              {t.support.countdownHours}
-            </>
-          )}
-        </span>
+        <CountdownDisplay days={days} hours={hours} label={label} status={status} size="sm" />
       </p>
     );
   }
 
   return (
     <div className="mb-6 rounded-2xl bg-primary px-6 py-5 text-center text-white shadow-sm">
-      <p className="text-sm font-medium text-white/85">{label}</p>
-      <div className="mt-1">
-        <CountdownUnits days={days} hours={hours} size="lg" />
-      </div>
+      <CountdownDisplay days={days} hours={hours} label={label} status={status} size="lg" />
     </div>
   );
 }

@@ -10,8 +10,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   const links = [
-    { label: t.footer.project, href: "/" },
-    { label: t.footer.supporters, href: "/supporters" },
+    { label: t.footer.supporters, href: "/#supporters" },
     { label: t.footer.contact, href: "/contact" },
     { label: t.footer.instagram, href: SITE.instagramUrl, external: true },
     { label: t.footer.terms, href: "/terms" },

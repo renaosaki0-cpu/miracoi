@@ -10,10 +10,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MiracoiIcon } from "./ui/MiracoiIcon";
 
 const NAV_ITEMS = [
-  { id: "project", href: "/project" },
-  { id: "returns", href: "/returns" },
-  { id: "supporters", href: "/supporters" },
-  { id: "faq", href: "/faq" },
+  { id: "supporters", href: "/#supporters" },
   { id: "contact", href: "/contact" },
 ] as const;
 
@@ -26,10 +23,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLabels: Record<NavId, string> = {
-    project: t.nav.project,
-    returns: t.nav.returns,
     supporters: t.nav.supporters,
-    faq: t.nav.faq,
     contact: t.nav.contact,
   };
 
@@ -40,8 +34,6 @@ export function Header() {
   }, []);
 
   useEffect(() => setMenuOpen(false), [pathname]);
-
-  const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <header
@@ -63,9 +55,7 @@ export function Header() {
             <Link
               key={item.id}
               href={item.href}
-              className={`relative rounded-full px-2.5 py-2 text-xs font-medium transition-colors xl:px-3 xl:text-sm ${
-                isActive(item.href) ? "text-primary" : "text-white/90 hover:text-primary"
-              }`}
+              className="relative rounded-full px-3 py-2 text-xs font-medium text-white/90 transition-colors hover:text-primary xl:text-sm"
             >
               {navLabels[item.id]}
             </Link>
@@ -117,9 +107,7 @@ export function Header() {
                 <li key={item.id}>
                   <Link
                     href={item.href}
-                    className={`block rounded-xl px-4 py-3.5 text-base font-medium transition-colors ${
-                      isActive(item.href) ? "bg-white/10 text-primary" : "text-white/90 hover:text-primary"
-                    }`}
+                    className="block rounded-xl px-4 py-3.5 text-base font-medium text-white/90 transition-colors hover:text-primary"
                   >
                     {navLabels[item.id]}
                   </Link>
