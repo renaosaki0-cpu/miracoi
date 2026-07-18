@@ -61,6 +61,11 @@ export type Dictionary = {
     p3: string;
     highlight: string;
     cta: string;
+    sharedVision: {
+      line1: string;
+      line2: string;
+      body: string;
+    };
     learningPhoto: { alt: string; caption: string };
   };
   mission: {

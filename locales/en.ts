@@ -74,6 +74,11 @@ const en: Dictionary = {
     p2: "At 15, Co-Representative Osaki met street children in Africa. She was too afraid to reach out. They smiled and spoke to her first.",
     p3: "This time, we go to listen to each child's voice.",
     highlight: "Even without words, hearts connect — 11 years of Yosakoi is our bridge.",
+    sharedVision: {
+      line1: "Two different experiences.",
+      line2: "One shared vision.",
+      body: "Mozambique and Zambia. An unkept promise—and children who reached out first. Our paths were different, but together they became Miracoi.",
+    },
     cta: "Read the full story on READYFOR",
     learningPhoto: {
       alt: "Learning together with local children on site",

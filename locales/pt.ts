@@ -74,6 +74,11 @@ const pt: Dictionary = {
     p2: "Aos 15 anos, Osaki conheceu crianças de rua em África. Tinha medo de estender a mão. Mas foram elas que sorriram e lhe falaram primeiro.",
     p3: "As crianças que conhecemos sonham, preocupam-se e pensam no futuro — tal como nós. Desta vez, vamos ouvir a voz de cada criança.",
     highlight: "Mesmo sem palavras, os corações ligam-se — 11 anos de Yosakoi tornam-se a nossa ponte.",
+    sharedVision: {
+      line1: "Duas experiências diferentes.",
+      line2: "Uma visão partilhada.",
+      body: "Moçambique e Zâmbia. Uma promessa não cumprida — e crianças que sorriram primeiro. Os nossos caminhos eram diferentes, mas juntos tornaram-se Miracoi.",
+    },
     cta: "Apoiar Este Desafio",
     learningPhoto: {
       alt: "Aprender juntos com crianças locais no terreno",
