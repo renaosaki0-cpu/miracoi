@@ -4,6 +4,7 @@ import { useLocale } from "@/lib/i18n/context";
 import { MEMBER_ORDER, type MemberId } from "@/locales/memberProfiles";
 import { resolveImage } from "@/lib/images";
 import { layoutClass } from "@/lib/imageLayout";
+import { CTAButton } from "./ui/CTAButton";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
 
@@ -22,14 +23,18 @@ export function Story() {
   const handwritten = locale === "ja" ? "font-handwritten" : "";
 
   return (
-    <section id="story" className="section-padding bg-section-warm">
+    <section id="story" className="section-padding scroll-mt-20 bg-section-warm md:scroll-mt-24">
       <div className="container-main max-w-5xl">
         <ScrollReveal className="mb-10 text-center md:mb-12">
           <p className="section-label">{t.story.label}</p>
-          <h2 className={`text-2xl font-bold tracking-tight text-text sm:text-3xl md:text-4xl ${handwritten}`}>
-            {t.story.title}
-          </h2>
+          <h2 className="text-2xl font-bold tracking-tight text-text sm:text-3xl md:text-4xl">{t.story.title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-subtext">{t.story.description}</p>
+        </ScrollReveal>
+
+        <ScrollReveal className="mb-10 text-center md:mb-12" delay={0.05}>
+          <p className={`text-2xl leading-snug text-primary sm:text-[1.75rem] ${handwritten || "font-semibold tracking-tight"}`}>
+            {t.story.turningPoint}
+          </p>
         </ScrollReveal>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-10">
@@ -73,6 +78,12 @@ export function Story() {
             </p>
             <p className="mx-auto mt-5 max-w-lg text-base leading-[1.9] text-subtext">{t.story.sharedVision.body}</p>
           </div>
+        </ScrollReveal>
+
+        <ScrollReveal className="mt-8 text-center md:mt-10" delay={0.2}>
+          <CTAButton variant="primary" size="md" className="w-full min-h-12 sm:w-auto">
+            {t.story.cta}
+          </CTAButton>
         </ScrollReveal>
       </div>
     </section>

@@ -2,6 +2,9 @@
 export type Dictionary = {
   meta: { title: string; description: string };
   nav: {
+    home: string;
+    about: string;
+    ourStory: string;
     project: string;
     gallery: string;
     returns: string;
@@ -28,21 +31,26 @@ export type Dictionary = {
   };
   hero: {
     eyebrow: string;
-    titleLine1: string;
-    titleLine2: string;
-    subtitle: string;
-    description: string;
-    ctaSupport: string;
-    ctaExplore: string;
-    ctaNote: string;
-    scroll: string;
+    title: string;
+    subtitleLines: string[];
+    cta: string;
   };
   readyfor: {
     support: string;
     viewProject: string;
     readStory: string;
+    ctaLearnMore: string;
+    ctaReadStory: string;
+    ctaFullProject: string;
     note: string;
     detailsOnReadyfor: string;
+  };
+  home: {
+    whoWeAre: HomeNarrativeSection;
+    whyMozambique: HomeNarrativeSection;
+    whatWeHope: HomeNarrativeIdeasSection;
+    whatMakesDifferent: HomeNarrativeSection;
+    afterProject: HomeNarrativeSection;
   };
   projectSummary: {
     title: string;
@@ -61,6 +69,8 @@ export type Dictionary = {
     p3: string;
     highlight: string;
     cta: string;
+    /** Short, personal, handwritten-style statement marking the emotional turning point */
+    turningPoint: string;
     sharedVision: {
       line1: string;
       line2: string;
@@ -325,6 +335,23 @@ export type Dictionary = {
     };
     emailSubject: string;
   };
+};
+
+export type HomeNarrativeSection = {
+  label: string;
+  title: string;
+  lines: string[];
+  cta: string;
+  /** Optional short, personal, handwritten-style statement (Japanese only) */
+  emphasis?: string;
+};
+
+export type HomeNarrativeIdeasSection = {
+  label: string;
+  title: string;
+  intro: string;
+  ideas: string[];
+  cta: string;
 };
 
 export type Locale = "ja" | "en" | "pt";

@@ -54,7 +54,7 @@ export function Supporters({ standalone = false }: SupportersProps) {
   return (
     <section
       id="supporters"
-      className={`section-padding overflow-x-hidden ${
+      className={`section-padding scroll-mt-20 overflow-x-hidden md:scroll-mt-24 ${
         standalone ? "min-h-[60vh] bg-section-white" : "bg-section-cream"
       }`}
     >
