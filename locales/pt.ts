@@ -10,13 +10,17 @@ const pt: Dictionary = {
       "Miracoi é uma unidade de estudantes do ensino secundário que liga a voz das crianças em Moçambique ao futuro através do Yosakoi. Apoie a nossa campanha de ¥770.000.",
   },
   nav: {
+    home: "Início",
+    about: "Sobre a Miracoi",
+    ourStory: "A Nossa História",
+    activities: "O Que Fazemos",
     project: "Projeto",
     gallery: "Galeria",
     returns: "Recompensas",
-    supporters: "Mensagens",
+    supporters: "Mensagens de Apoio",
     faq: "FAQ",
     contact: "Contacto",
-    support: "Apoiar no READYFOR",
+    support: "Apoiar Esta Jornada",
     menu: "Abrir menu",
     viewMore: "Ver mais",
     language: "Idioma",
@@ -38,8 +42,63 @@ const pt: Dictionary = {
     support: "Apoiar no READYFOR",
     viewProject: "Ver o projecto no READYFOR",
     readStory: "Ler a história completa no READYFOR",
+    ctaLearnMore: "Saber mais no READYFOR",
+    ctaReadStory: "Ler a história completa da actividade",
+    ctaFullProject: "Ler o projecto completo",
     note: "Calendário, orçamento e recompensas estão na página do projecto READYFOR.",
     detailsOnReadyfor: "Os detalhes completos estão na página do projecto READYFOR.",
+  },
+  home: {
+    whoWeAre: {
+      label: "Sobre a Miracoi",
+      title: "O que é a Miracoi?",
+      lines: [
+        "Mirai (futuro) × Yosakoi — um nome escolhido por duas estudantes do ensino secundário.",
+        "Acreditamos que tudo começa não por ajudar alguém, mas por ouvir a voz de cada pessoa.",
+      ],
+      cta: "Descobrir a Miracoi",
+    },
+    whyStarted: {
+      label: "Porquê começámos",
+      title: '"Vejo-te no Japão."',
+      lines: [
+        "Pensávamos que compreendíamos as crianças em África — sem as ouvir verdadeiramente. Foi ao perceber que tínhamos mantido distância que a Miracoi nasceu.",
+      ],
+      emphasis: "Não queremos ficar só a pensar que compreendíamos.",
+      cta: "Ler a História Completa no READYFOR",
+    },
+    project: {
+      label: "O que faremos em Moçambique",
+      title: "O que faremos em Moçambique",
+      intro: "Três actividades que realizaremos no terreno. Os detalhes completos estão no READYFOR.",
+      activities: [
+        {
+          title: "Ligação através do Yosakoi",
+          description: "Dançar com cerca de 80 a 100 crianças, usando os naruko (castanholas de madeira).",
+        },
+        {
+          title: "Ouvir a voz de cada criança",
+          description:
+            "Conversar com cerca de 10 a 20 crianças sobre os seus sonhos, preocupações, gostos e o que valorizam.",
+        },
+        {
+          title: "Levar até ao Japão",
+          description: "Partilhar o que ouvimos e vivemos através de vídeo, redes sociais e sessões de relato no Japão.",
+        },
+      ],
+      emphasis: "Começa por ouvir.",
+      cta: "Ver Todas as Actividades no READYFOR",
+    },
+    afterProject: {
+      label: "O futuro que queremos continuar a construir",
+      title: "O futuro que queremos continuar a construir",
+      lines: [
+        "O que começa no terreno não termina quando regressamos ao Japão.",
+        "Sessões de relato, apresentações em escolas, mensagens entre crianças e intercâmbio online contínuo — continuaremos a levar esta relação para o futuro.",
+      ],
+      emphasis: "Construir o futuro, juntos.",
+      cta: "Ver o Que Vem a Seguir no READYFOR",
+    },
   },
   projectSummary: {
     title: "Setembro de 2026, em Moçambique",
@@ -55,36 +114,27 @@ const pt: Dictionary = {
   },
   hero: {
     eyebrow: "Projeto Internacional de Cooperação — Ensino Secundário",
-    titleLine1: "Aquela promessa—",
-    titleLine2: "queremos cumpri-la desta vez",
-    subtitle: "Setembro de 2026: vamos a Moçambique ouvir a voz das crianças.",
-    description:
-      "Dois estudantes do ensino secundário precisam de ¥770.000 e do seu apoio. Cada contribuição ajuda a mudar o futuro das crianças.",
-    ctaSupport: "Apoiar no READYFOR",
-    ctaExplore: "Ver o projecto no READYFOR",
-    ctaNote: "Detalhes e formas de apoio estão na página READYFOR.",
-    scroll: "Deslizar",
+    title: "Aquela promessa — desta vez, queremos cumpri-la.",
+    subtitleLines: [
+      "Duas estudantes do ensino secundário, a ligar crianças",
+      "no Japão e em Moçambique através do Yosakoi —",
+      "levando cada voz para o futuro.",
+    ],
+    ctaPrimary: "Apoiar Esta Jornada",
+    ctaSecondary: "Saber Mais Sobre o Projecto",
   },
   story: {
-    label: "História",
-    title: '"Vejo-te no Japão."',
-    description: "A história da Miracoi, nascida de uma promessa não cumprida.",
-    quote: "O que é que ela realmente desejava? Talvez nunca saibamos a resposta.",
+    label: "História dos Fundadores",
+    title: "A História dos Nossos Fundadores",
+    intro:
+      '"Vejo-te no Japão." Duas estudantes de Kochi e Ehime, moldadas por experiências diferentes, fundaram a Miracoi para cumprir essa promessa.',
     p1: "Aos 14 anos, Yasunaga conheceu uma rapariga da sua idade em Moçambique. Ela deveria vir formar-se ao Japão, mas os pais recusaram. Casou-se, teve um filho e deixou de poder ir à escola.",
     p2: "Aos 15 anos, Osaki conheceu crianças de rua em África. Tinha medo de estender a mão. Mas foram elas que sorriram e lhe falaram primeiro.",
-    p3: "As crianças que conhecemos sonham, preocupam-se e pensam no futuro — tal como nós. Desta vez, vamos ouvir a voz de cada criança.",
-    highlight: "Mesmo sem palavras, os corações ligam-se — 11 anos de Yosakoi tornam-se a nossa ponte.",
     sharedVision: {
-      line1: "Duas experiências diferentes.",
-      line2: "Uma visão partilhada.",
-      body: "Moçambique e Zâmbia. Uma promessa não cumprida — e crianças que sorriram primeiro. Os nossos caminhos eram diferentes, mas juntos tornaram-se Miracoi.",
+      emphasis: "Experiências diferentes. Um mesmo sentimento.",
+      body: "Queremos ouvir a voz de cada criança.",
     },
-    cta: "Apoiar Este Desafio",
-    learningPhoto: {
-      alt: "Aprender juntos com crianças locais no terreno",
-      caption:
-        "A aprender a usar uma máquina de costura com membros da comunidade local. Valorizamos o tempo de aprender uns com os outros — não ensinar nem ser ensinados, mas aprender em conjunto.",
-    },
+    cta: "Ler Mais Sobre a História das Duas",
   },
   mission: {
     label: "",
@@ -479,7 +529,7 @@ const pt: Dictionary = {
     close: "Fechar",
     ctaTitle: "Junte-se a nós para ligar a voz das crianças ao futuro.",
     ctaSubtitle: "Muitas pessoas estão a apoiar o desafio da Miracoi.",
-    ctaSupport: "Apoiar no READYFOR",
+    ctaSupport: "Apoiar Esta Jornada",
     viewAll: "Ver Tudo",
     submitTitle: "Enviar Mensagem de Apoio",
     submitDescription:
@@ -622,9 +672,9 @@ const pt: Dictionary = {
     label: "",
     title: '"Vejo-te no Japão"—agora é a nossa vez de ir encontrá-las.',
     description: "O seu apoio liga a voz das crianças ao futuro.",
-    support: "Apoiar no READYFOR",
+    support: "Apoiar Esta Jornada",
     messages: "Ver Mensagens",
-    quote: "",
+    quote: "Aquela promessa — desta vez, queremos cumpri-la.",
   },
   contact: {
     label: "Contacto",

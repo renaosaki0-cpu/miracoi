@@ -2,6 +2,10 @@
 export type Dictionary = {
   meta: { title: string; description: string };
   nav: {
+    home: string;
+    about: string;
+    ourStory: string;
+    activities: string;
     project: string;
     gallery: string;
     returns: string;
@@ -28,21 +32,31 @@ export type Dictionary = {
   };
   hero: {
     eyebrow: string;
-    titleLine1: string;
-    titleLine2: string;
-    subtitle: string;
-    description: string;
-    ctaSupport: string;
-    ctaExplore: string;
-    ctaNote: string;
-    scroll: string;
+    /** Short, handwritten emotional headline — the only hero text using the handwritten font */
+    title: string;
+    subtitleLines: string[];
+    ctaPrimary: string;
+    ctaSecondary: string;
   };
   readyfor: {
     support: string;
     viewProject: string;
     readStory: string;
+    ctaLearnMore: string;
+    ctaReadStory: string;
+    ctaFullProject: string;
     note: string;
     detailsOnReadyfor: string;
+  };
+  home: {
+    /** 「Miracoiとは」— Mirai × Yosakoi, kept personal and non-corporate */
+    whoWeAre: HomeNarrativeSection;
+    /** 「なぜ始めたのか」— short emotional teaser, links to the full story on READYFOR */
+    whyStarted: HomeNarrativeSection;
+    /** 「私たちがモザンビークで行うこと」— the three on-the-ground activities */
+    project: HomeNarrativeActivitiesSection;
+    /** 「帰国後につなげたい未来」— how the relationship continues after the trip */
+    afterProject: HomeNarrativeSection;
   };
   projectSummary: {
     title: string;
@@ -51,22 +65,20 @@ export type Dictionary = {
     readyforNote: string;
     cta: string;
   };
+  /** 「共同代表2人の想い」— balanced founder cards + shared statement */
   story: {
     label: string;
     title: string;
-    description: string;
-    quote: string;
+    /** Short lead-in above the two founder cards */
+    intro: string;
     p1: string;
     p2: string;
-    p3: string;
-    highlight: string;
     cta: string;
     sharedVision: {
-      line1: string;
-      line2: string;
+      /** Short, handwritten emotional statement shared by both founders */
+      emphasis: string;
       body: string;
     };
-    learningPhoto: { alt: string; caption: string };
   };
   mission: {
     label: string;
@@ -325,6 +337,30 @@ export type Dictionary = {
     };
     emailSubject: string;
   };
+};
+
+export type HomeNarrativeSection = {
+  label: string;
+  title: string;
+  lines: string[];
+  cta: string;
+  /** Optional short, personal, handwritten-style statement (Japanese only) */
+  emphasis?: string;
+};
+
+export type ProjectActivity = {
+  title: string;
+  description: string;
+};
+
+export type HomeNarrativeActivitiesSection = {
+  label: string;
+  title: string;
+  intro: string;
+  activities: ProjectActivity[];
+  /** Short, personal, handwritten-style statement */
+  emphasis: string;
+  cta: string;
 };
 
 export type Locale = "ja" | "en" | "pt";

@@ -5,7 +5,7 @@ import { ScrollReveal } from "./ui/ScrollReveal";
 
 /** 私たちが大切にしていること — ミッション/ビジョン/バリュー表記なし */
 export function ValuesSection() {
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
 
   return (
     <section id="values" className="section-padding bg-section-cream">
@@ -21,13 +21,7 @@ export function ValuesSection() {
           {t.mission.cards.map((card, i) => (
             <ScrollReveal key={card.title} delay={i * 0.06}>
               <li className="rounded-2xl bg-white/80 p-6 shadow-sm ring-1 ring-black/[0.04] md:p-8">
-                <h3
-                  className={`text-lg font-bold text-text md:text-xl ${
-                    locale === "ja" ? "font-handwritten text-xl md:text-2xl" : ""
-                  }`}
-                >
-                  {card.title}
-                </h3>
+                <h3 className="text-lg font-bold text-text md:text-xl">{card.title}</h3>
                 <p className="mt-3 text-sm leading-[1.9] text-subtext md:text-base">{card.description}</p>
               </li>
             </ScrollReveal>

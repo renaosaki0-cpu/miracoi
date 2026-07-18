@@ -10,13 +10,17 @@ const en: Dictionary = {
       "Miracoi is a high school unit connecting children's voices in Mozambique to the future through Yosakoi. Support our ¥770,000 crowdfunding campaign.",
   },
   nav: {
+    home: "Home",
+    about: "About Miracoi",
+    ourStory: "Our Story",
+    activities: "What We Do",
     project: "Project",
     gallery: "Gallery",
     returns: "Returns",
-    supporters: "Messages",
+    supporters: "Supporter Messages",
     faq: "FAQ",
     contact: "Contact",
-    support: "Support us on READYFOR",
+    support: "Support This Journey",
     menu: "Open menu",
     viewMore: "View more",
     language: "Language",
@@ -38,8 +42,64 @@ const en: Dictionary = {
     support: "Support us on READYFOR",
     viewProject: "View the project on READYFOR",
     readStory: "Read the full story on READYFOR",
+    ctaLearnMore: "Learn more on READYFOR",
+    ctaReadStory: "Read our full story",
+    ctaFullProject: "Read the full project",
     note: "Schedules, budget breakdown, and return perks are on our READYFOR project page.",
     detailsOnReadyfor: "Full details for this page are on our READYFOR project page.",
+  },
+  home: {
+    whoWeAre: {
+      label: "About Miracoi",
+      title: "What is Miracoi?",
+      lines: [
+        "Mirai (future) × Yosakoi — a name two high school students chose together.",
+        "We believe it starts not with helping someone, but with listening to each person's voice.",
+      ],
+      cta: "Discover Miracoi",
+    },
+    whyStarted: {
+      label: "Why we started",
+      title: '"See you in Japan."',
+      lines: [
+        "We once believed we understood children in Africa — without truly listening. Realizing we had kept our distance is how Miracoi began.",
+      ],
+      emphasis: "We don't want to stop at thinking we understood.",
+      cta: "Read the Full Story on READYFOR",
+    },
+    project: {
+      label: "What we will do in Mozambique",
+      title: "What we will do in Mozambique",
+      intro: "Three activities we will carry out on the ground. Full details are on READYFOR.",
+      activities: [
+        {
+          title: "Connecting through Yosakoi",
+          description: "Dancing together with about 80–100 children, using naruko clappers.",
+        },
+        {
+          title: "Listening to each voice",
+          description:
+            "Talking with about 10–20 children about their dreams, worries, favorite things, and what matters to them.",
+        },
+        {
+          title: "Carrying it to Japan",
+          description:
+            "Sharing what we hear and experience through video, social media, and report sessions back in Japan.",
+        },
+      ],
+      emphasis: "It starts with listening.",
+      cta: "See the Full Activities on READYFOR",
+    },
+    afterProject: {
+      label: "The future we want to continue building",
+      title: "The future we want to continue building",
+      lines: [
+        "What begins on the ground does not end when we return to Japan.",
+        "Report sessions, school presentations, messages between children, and ongoing online exchange — we will keep carrying this relationship into the future.",
+      ],
+      emphasis: "Building the future, together.",
+      cta: "See What Comes Next on READYFOR",
+    },
   },
   projectSummary: {
     title: "September 2026, in Mozambique",
@@ -55,36 +115,27 @@ const en: Dictionary = {
   },
   hero: {
     eyebrow: "High School International Cooperation Project",
-    titleLine1: "That promise—",
-    titleLine2: "we want to keep it this time",
-    subtitle: "September 2026: we go to Mozambique to listen to children's voices.",
-    description:
-      "Two high school students need ¥770,000 and your support to make this happen. Every contribution helps change children's futures.",
-    ctaSupport: "Support us on READYFOR",
-    ctaExplore: "View the project on READYFOR",
-    ctaNote: "Full details and how to support are on our READYFOR project page.",
-    scroll: "Scroll",
+    title: "That promise — this time, we want to keep it.",
+    subtitleLines: [
+      "Two high school students, connecting children in Japan",
+      "and Mozambique through Yosakoi —",
+      "carrying each voice into the future.",
+    ],
+    ctaPrimary: "Support This Journey",
+    ctaSecondary: "Learn More About the Project",
   },
   story: {
-    label: "Story",
-    title: '"See you in Japan."',
-    description: "The story of Miracoi, born from an unfulfilled promise.",
-    quote: "What did she truly want? We may never know the answer.",
+    label: "Founders' Story",
+    title: "Our Founders' Story",
+    intro:
+      '"See you in Japan." Two students from Kochi and Ehime, shaped by different experiences, founded Miracoi to keep that promise.',
     p1: "At 14, Co-Representative Yasunaga met a girl her age in Mozambique. She was supposed to train in Japan, but the promise was never kept — and she could no longer attend school.",
     p2: "At 15, Co-Representative Osaki met street children in Africa. She was too afraid to reach out. They smiled and spoke to her first.",
-    p3: "This time, we go to listen to each child's voice.",
-    highlight: "Even without words, hearts connect — 11 years of Yosakoi is our bridge.",
     sharedVision: {
-      line1: "Two different experiences.",
-      line2: "One shared vision.",
-      body: "Mozambique and Zambia. An unkept promise—and children who reached out first. Our paths were different, but together they became Miracoi.",
+      emphasis: "Different experiences. One shared feeling.",
+      body: "We want to listen to every child's voice.",
     },
-    cta: "Read the full story on READYFOR",
-    learningPhoto: {
-      alt: "Learning together with local children on site",
-      caption:
-        "Learning how to use a sewing machine from local community members. We value time learning from each other — not teaching or being taught, but learning together.",
-    },
+    cta: "Read More of Their Story",
   },
   mission: {
     label: "",
@@ -479,7 +530,7 @@ const en: Dictionary = {
     close: "Close",
     ctaTitle: "Join us in connecting children's voices to the future.",
     ctaSubtitle: "Many people are cheering for Miracoi's challenge.",
-    ctaSupport: "Support us on READYFOR",
+    ctaSupport: "Support This Journey",
     viewAll: "View All",
     submitTitle: "Send a Message of Support",
     submitDescription:
@@ -622,9 +673,9 @@ const en: Dictionary = {
     label: "",
     title: '"See you in Japan"—now it is our turn to go meet them.',
     description: "Your support connects children's voices to the future.",
-    support: "Support us on READYFOR",
+    support: "Support This Journey",
     messages: "View Messages",
-    quote: "",
+    quote: "That promise — this time, we want to keep it.",
   },
   contact: {
     label: "Contact",

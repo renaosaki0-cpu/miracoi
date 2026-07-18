@@ -1,9 +1,6 @@
 import { Hero } from "@/components/Hero";
+import { WhoWeAre, HomeNarrativeSections } from "@/components/HomeNarrative";
 import { Story } from "@/components/Story";
-import { ReadyforStrip } from "@/components/ReadyforStrip";
-import { ValuesSection } from "@/components/ValuesSection";
-import { ProjectSummary } from "@/components/ProjectSummary";
-import { Support } from "@/components/Support";
 import { Supporters } from "@/components/Supporters";
 import { CTA } from "@/components/CTA";
 
@@ -11,11 +8,9 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <WhoWeAre />
       <Story />
-      <ReadyforStrip showStoryLink />
-      <ValuesSection />
-      <ProjectSummary />
-      <Support />
+      <HomeNarrativeSections />
       <Supporters />
       <CTA />
     </main>

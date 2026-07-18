@@ -4,13 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLocale } from "@/lib/i18n/context";
 import { CTAButton } from "./ui/CTAButton";
+import { EmotionalPhrase } from "./ui/EmotionalPhrase";
 import { resolveImage } from "@/lib/images";
 import { layoutClass } from "@/lib/imageLayout";
 import { MiraiImage } from "./ui/MiraiImage";
 import { ScrollReveal } from "./ui/ScrollReveal";
 
 export function CTA() {
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const bgY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
@@ -32,22 +33,18 @@ export function CTA() {
 
       <div className="container-main relative z-10 text-center">
         <ScrollReveal>
-          <h2
-            className={`text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl ${
-              locale === "ja" ? "font-handwritten text-3xl sm:text-4xl md:text-5xl" : ""
-            }`}
-          >
+          <EmotionalPhrase as="p" className="text-3xl leading-snug text-white sm:text-4xl md:text-5xl">
+            {t.cta.quote}
+          </EmotionalPhrase>
+          <h2 className="mx-auto mt-4 max-w-lg text-base font-semibold leading-relaxed text-white/95 sm:text-lg">
             {t.cta.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-white/90 md:mt-6 md:text-base">
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-white/80 md:text-base">
             {t.cta.description}
           </p>
-          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mx-auto sm:max-w-md md:mt-10">
+          <div className="mt-8 flex flex-col items-stretch sm:mx-auto sm:max-w-md md:mt-10">
             <CTAButton variant="secondary" size="lg" className="w-full min-h-12">
               {t.cta.support}
-            </CTAButton>
-            <CTAButton variant="ghost" size="md" className="w-full min-h-11">
-              {t.readyfor.viewProject}
             </CTAButton>
           </div>
         </ScrollReveal>

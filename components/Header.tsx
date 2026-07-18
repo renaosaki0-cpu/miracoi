@@ -10,6 +10,10 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MiracoiIcon } from "./ui/MiracoiIcon";
 
 const NAV_ITEMS = [
+  { id: "home", href: "/#home" },
+  { id: "about", href: "/#about" },
+  { id: "ourStory", href: "/#story" },
+  { id: "activities", href: "/#project" },
   { id: "supporters", href: "/#supporters" },
   { id: "contact", href: "/contact" },
 ] as const;
@@ -23,6 +27,10 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLabels: Record<NavId, string> = {
+    home: t.nav.home,
+    about: t.nav.about,
+    ourStory: t.nav.ourStory,
+    activities: t.nav.activities,
     supporters: t.nav.supporters,
     contact: t.nav.contact,
   };
@@ -50,12 +58,12 @@ export function Header() {
           Miracoi
         </Link>
 
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">
+        <nav className="hidden min-w-0 items-center gap-px lg:flex" aria-label="Main">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className="relative rounded-full px-3 py-2 text-xs font-medium text-white/90 transition-colors hover:text-primary xl:text-sm"
+              className="relative shrink-0 whitespace-nowrap rounded-full px-1.5 py-2 text-[0.64rem] font-medium text-white/90 transition-colors hover:text-primary lg:px-2 xl:px-3 xl:text-sm"
             >
               {navLabels[item.id]}
             </Link>
@@ -98,15 +106,11 @@ export function Header() {
             className="overflow-hidden border-t border-white/10 bg-[#111111] lg:hidden"
           >
             <ul className="container-main space-y-1 py-4">
-              <li>
-                <Link href="/" className="block rounded-xl px-4 py-3.5 text-base font-medium text-white/90">
-                  Home
-                </Link>
-              </li>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.href}
+                    onClick={() => setMenuOpen(false)}
                     className="block rounded-xl px-4 py-3.5 text-base font-medium text-white/90 transition-colors hover:text-primary"
                   >
                     {navLabels[item.id]}
@@ -120,6 +124,7 @@ export function Header() {
                 <CTAButton
                   variant="primary"
                   size="md"
+                  onNavigate={() => setMenuOpen(false)}
                   className="w-full min-h-12 shadow-lg shadow-primary/40 ring-2 ring-white/10"
                 >
                   {t.nav.support}

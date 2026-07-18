@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
+import { useLocale } from "@/lib/i18n/context";
+
+const NEW_TAB_HINT: Record<string, string> = {
+  ja: "（新しいタブでREADYFORが開きます）",
+  en: "(opens READYFOR in a new tab)",
+  pt: "(abre o READYFOR numa nova aba)",
+};
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
@@ -10,6 +17,8 @@ type ButtonSize = "sm" | "md" | "lg";
 type CTAButtonProps = {
   href?: string;
   onClick?: () => void;
+  /** Fires alongside normal link navigation (e.g. closing a mobile menu) without turning this into a plain button */
+  onNavigate?: () => void;
   children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -37,12 +46,14 @@ const sizeStyles: Record<ButtonSize, string> = {
 export function CTAButton({
   href = SITE.readyforUrl,
   onClick,
+  onNavigate,
   children,
   variant = "primary",
   size = "md",
   className = "",
   external = true,
 }: CTAButtonProps) {
+  const { locale } = useLocale();
   const classes = `inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-300 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   const motionProps = {
@@ -60,11 +71,18 @@ export function CTAButton({
   }
 
   if (external) {
+    const isMailto = href.startsWith("mailto:");
+    const ariaLabel =
+      !isMailto && typeof children === "string"
+        ? `${children} ${NEW_TAB_HINT[locale] ?? NEW_TAB_HINT.en}`
+        : undefined;
     return (
       <motion.a
         href={href}
-        target={href.startsWith("mailto:") ? undefined : "_blank"}
-        rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+        target={isMailto ? undefined : "_blank"}
+        rel={isMailto ? undefined : "noopener noreferrer"}
+        aria-label={ariaLabel}
+        onClick={onNavigate}
         className={classes}
         {...motionProps}
       >
@@ -75,7 +93,7 @@ export function CTAButton({
 
   return (
     <motion.div {...motionProps}>
-      <Link href={href} className={classes}>
+      <Link href={href} onClick={onNavigate} className={classes}>
         {children}
       </Link>
     </motion.div>

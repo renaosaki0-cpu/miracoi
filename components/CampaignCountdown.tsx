@@ -57,9 +57,9 @@ function CountdownDisplay({
 
   return (
     <p
-      className={`font-bold leading-snug tracking-tight ${
+      className={`font-en font-bold leading-snug tracking-tight ${
         large ? "text-3xl sm:text-4xl md:text-5xl" : "text-sm sm:text-base"
-      } ${locale === "ja" && large ? "font-handwritten" : "font-en"}`}
+      }`}
     >
       {text}
     </p>
