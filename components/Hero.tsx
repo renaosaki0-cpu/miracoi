@@ -25,8 +25,11 @@ export function Hero() {
       className="relative -mt-14 min-h-[90svh] sm:-mt-16 md:-mt-[4.5rem] md:min-h-[100svh]"
     >
       {/* 画像レイヤー — パララックス用の overflow-hidden はここだけに閉じ込め、本文は絶対にクリップしない */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div style={{ y: imageY, scale: imageScale }} className="h-[115%] w-full origin-center">
+      <div className="absolute inset-0 overflow-hidden bg-neutral-900">
+        <motion.div
+          style={{ y: imageY, scale: imageScale }}
+          className="absolute inset-0 h-[115%] w-full origin-center"
+        >
           <MiraiImage
             src={resolveImage("hero")}
             alt="モザンビークの子どもたちと交流するMiracoiメンバー"
